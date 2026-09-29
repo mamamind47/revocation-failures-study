@@ -54,6 +54,22 @@ scheduled jobs, and the ordinary data a user created while authorised (a watch o
 running stopwatch on an issue, a webhook). If any of that state keeps acting on the old authority, the
 revocation is only partial.
 
+Consider a collaborator on a private Gitea repository who starts a stopwatch on an issue, watches the
+repository, and receives notifications. The owner then removes them. Their direct requests to the repository now
+fail, as intended. Yet in January 2026 three advisories reported that the removed collaborator could still read issue
+titles through the running stopwatch, keep receiving release e-mails through the watch, and read private titles
+through old notification threads. All three were fixed in the same release. In July 2026 a second wave of advisories
+reported that sibling endpoints (starred repositories, tracked time) still leaked, that the
+REST path for making a repository private skipped the watch cleanup added in January, and that the notification
+fix hid one response field but not another. None of these leaks is visible to a test that logs in as the
+removed user after the removal and requests the repository, because every leak goes through state the user
+created \emph{before} they lost access. Section~\ref{sec:gitea} traces this history in detail.
+
+Revocation is routine. Employees change roles and leave, contractors finish, accounts are suspended for abuse,
+and users change passwords after a suspected compromise. In each case the organisation relies on the
+application to withdraw authority promptly and completely. When the withdrawal is partial, the failure is quiet. The
+revoked party sees no error, and the administrator sees a user interface that reports the change as done.
+
 Existing testing approaches mostly check authorisation from a clean state. ACtests~\cite{xiang2025actests}
 tests configuration changes by comparing access decisions before and after a change in a fresh
 environment, and notes that a cache service can be removed because it affects performance only.
@@ -88,13 +104,38 @@ fix. (5) A replication package.
 \section{Background and Related Work}
 %======================================================================
 
+\paragraph{Terminology and threat model}
+We call the entity that loses authority the \emph{subject}: a user account, an API credential, a device, or a
+share link. A \emph{revocation trigger} is any event that is supposed to withdraw some of the subject's
+authority: a role change, removal from a team, account deactivation or deletion, credential deletion, logout,
+a password change or reset, a repository becoming private, or an identity-provider change that is synchronised into
+the application. \emph{Residual authority} is any part of the withdrawn authority that the subject can still
+exercise after the trigger. Two adversaries matter. The first is the subject themselves, for example a demoted
+administrator or a removed collaborator who keeps using the application. The second is a third party holding a
+credential that the legitimate user tried to invalidate, for example a stolen session after a password change.
+The first adversary dominates the permission, membership and account kinds. The second dominates logout and
+password change. Our analysis does not depend on which adversary exploits a case. It depends only on whether
+withdrawn authority remains exercisable.
+
 \paragraph{Testing access control}
 Model-based testing derives access-control tests from policy and behaviour models~\cite{xu2015rbac}.
 ACtests~\cite{xiang2025actests} tests the impact of access-control configuration changes on deployed web
 applications by forking a mini test environment. It reports 168 new vulnerabilities across 193 public
 configurations. Sahin et al.\ add access-policy oracles to EvoMaster and generate executable
 tests for REST APIs~\cite{sahin2026evomaster}. These approaches evaluate requests against the current
-policy. Our RQ2 asks how much of the revocation problem remains outside that frame.
+policy. BACFuzz combines LLM-guided
+gray-box fuzzing with SQL-based verification to find broken access control in PHP applications, and reports
+26 previously unknown issues across 20 applications~\cite{dharmaadi2025bacfuzz}. Shen surveys the detection
+of access-control misconfigurations through data mining, testing and verification~\cite{shen2023acmisconfig}. Our RQ2 asks how much of the revocation problem remains outside that frame. The distinction is not a
+criticism of these tools. ACtests, for example, targets configuration changes whose effect is fully determined by the
+new configuration. Revocation failures are the complementary case. The new policy is correct, but state created
+under the old policy still acts on it.
+
+\paragraph{Security advisories as research data}
+The GitHub Advisory Database is a common source for mining-software-repositories research. Segal et al.\ study
+its review pipeline over 288{,}000 advisories and find two distinct review-latency regimes that depend on
+the submission pathway~\cite{segal2026ghsareview}. This matters for us because we use only the reviewed subset,
+which is shaped by that pipeline.
 
 \paragraph{Sessions and logout}
 Insufficient session expiration (CWE-613) and the failure to invalidate sessions or tokens at logout are
@@ -127,6 +168,11 @@ We cloned the \texttt{github-reviewed} tree of the GitHub Advisory Database on 2
 542 candidates. Its patterns cover revocation verbs, removal from teams, groups, projects and similar containers, deactivated or
 deleted accounts, sessions that are not invalidated, stale permissions or tokens, and cached permission
 decisions (\texttt{scripts/01\_filter.py}). We measured the filter's recall separately (Section~\ref{sec:recall}).
+We chose text over CWE labels because a revocation failure can be filed under many weakness classes, as RQ3 confirms.
+We chose the reviewed subset because unreviewed advisories often lack package and version data. The patterns were
+written to over-select. Most of the 542 candidates are not revocation failures. The most common false positives are
+malware advisories that recommend revoking tokens, certificate-revocation checking bugs, and ordinary IDOR reports that
+use words such as ``no longer''.
 Table~\ref{tab:filter} lists the pattern families and how many candidates each matched. A candidate can
 match several families.
 
@@ -165,6 +211,11 @@ revocation, logout and password change. We exclude revocation checking in crypto
 protocols and libraries (X.509 CRL/OCSP, SSH CA keys, PGP, verifiable credentials). We also exclude subjects who
 never held the authority (for example ordinary IDOR), expiry by timeout, and single-use tokens that are not
 consumed.
+Typical exclusions illustrate these boundaries. A Doorkeeper advisory in which any client can revoke other clients'
+tokens concerns an unauthorised \emph{revoke}, not residual authority. The many advisories for malicious packages advise
+readers to ``revoke all tokens'' but describe no failure of revocation. A password-reset link that can be reused
+after it was used once is a single-use token that was not consumed, which is excluded. A reset link that stays valid after the
+account's e-mail address changes is included, because the change withdraws the old mailbox's authority.
 
 For relevant cases we code four fields. The \emph{carrier} records where residual authority lives:
 \textsc{session}, \textsc{token}, \textsc{cache} (server-side), \textsc{connection} (a long-lived connection
@@ -206,7 +257,29 @@ Codex CLI (OpenAI, \texttt{gpt-5.6-sol}). Neither saw the other's labels. Agreem
 94.5\% ($\kappa=0.877$~\cite{cohen1960kappa}). On the 171 cases both coders marked relevant, $\kappa$ was
 0.894 for carrier, 0.847 for clean-state visibility, 0.888 for kind, and 0.949 for the web-application flag. All 49
 disagreements were adjudicated, each with a recorded reason (33 kept the first coder's label, 15 took the
-second's, and 1 took neither). Most disagreements came from one ambiguity in the first codebook version, which rule R1 resolves.
+second's, and 1 took neither). We grouped the recorded reasons by keyword into the categories of Table~\ref{tab:disagree}. The grouping is
+approximate. The two rules added in v1.1 resolve 14 of the 49 disagreements. Eight concern relevance, where one coder
+saw no legitimately held authority being withdrawn. Five sit on the session--token boundary, which does not affect
+clean-state visibility. The remainder are judgements about the carrier or visibility of individual cases.
+
+\begin{table}[t]
+\centering\small
+\caption{Coder disagreements by adjudication reason (keyword grouping of the recorded reasons; $n=49$).}
+\label{tab:disagree}
+\begin{tabular}{lr}
+\toprule
+Reason & Cases \\
+\midrule
+Carrier or visibility judgement for the individual case & 17 \\
+Leaked metadata counts as exercising withdrawn authority (rule R1) & 8 \\
+No legitimately held authority was withdrawn & 8 \\
+Object created before revocation, so not clean-state visible (rule R2) & 6 \\
+Session versus token boundary & 5 \\
+Out of scope: cryptographic revocation checking & 3 \\
+Out of scope: single-use token not consumed & 2 \\
+\bottomrule
+\end{tabular}
+\end{table}
 To validate the labels, the first author re-coded a stratified blind sample of 100 candidates
 (50 adjudicated relevant, drawn proportionally by carrier, and 50 not relevant) using the codebook alone, without access
 to either coder's labels. Against the adjudicated labels \emph{as they stood before the re-code}, agreement on relevance
@@ -220,7 +293,11 @@ we added three clarifications to the codebook (v1.2).
 \subsection{Recall audit}\label{sec:recall}
 Because the keyword filter can miss cases, we audited the 35{,}437 non-candidate advisories by
 stratified sampling in two rounds (Table~\ref{tab:recall}). Round~1 covered seven access-control CWEs. Round~2 covered the
-rest, stratified by how many caught cases each CWE held. Codex coded the samples, and every ``relevant''
+rest, stratified by how many caught cases each CWE held. We stratified because
+revocation failures are rare: 183 in 35{,}979 advisories, or about 0.5\%. A simple random sample of the non-candidates
+would contain almost no positives and would give a useless bound. Stratifying by the density of caught cases puts
+sampling effort where misses are likely. It also isolates a large residual stratum where misses are unlikely but
+cannot be ruled out by sampling alone. Codex coded the samples, and every ``relevant''
 call was adjudicated (13 of 59 overturned, one of them a duplicate advisory). A blind check of 60 ``not relevant''
 calls found no misses (95\% upper bound on the false-negative rate: 5\%). The audit recovered 46 missed cases.
 The point estimate of the filter's recall is 0.73. The sampling lower bound is uninformative because
@@ -260,6 +337,14 @@ plugin (GHSA-25g4-p347-x748). Data cases last indefinitely because nothing expir
 role bindings after a project role was removed from a group (GHSA-28g7-896h-695v). Kimai let a user derive
 new timesheets from historical entries in a project they no longer had access to (GHSA-c6w6-57jj-62vh).
 
+\paragraph{Beyond web applications}
+The 42 cases in libraries, frameworks and other non-web software look different. Sessions (13) and tokens (11)
+still lead, but caches carry 8 of 42 cases (19\%), compared with 8 of 187 (4\%) in web applications. The non-web
+cache cases include key-provider and signing-key caches that keep trusting keys whose use was revoked, and
+gateway processes that keep a rotated secret in memory until restart. One reading of the ``cache'' intuition is
+that it comes from this infrastructure layer. In applications, revocation state is more often copied into sessions,
+tokens and ordinary rows than into a dedicated cache.
+
 
 \begin{figure}[t]
 \centering
@@ -285,6 +370,51 @@ login still inherits, and 14 depend on an object the subject created while autho
 stopwatch, an unread notification, a starred or watched repository, a webhook, a fork, or a historical
 timesheet. A clean-state test starts without these objects and cannot see the leak.
 
+The clean-state-visible cases are informative too. Twenty-five of the 33 are missing checks, mostly on alternative
+authentication paths (see RQ3). The other eight are residual grants that persist in the data model. Rancher did not
+delete orphaned role bindings when a project role was removed from a group. Zitadel missed some user grants when several
+project roles were deleted at once. Moodle did not revoke the capabilities of a removed cohort role assignment. A
+clean-state test finds these only if it checks each revoked capability. Checking whether the user can still log in is not enough.
+
+\paragraph{Severity}
+Table~\ref{tab:severity} gives GitHub's severity rating by carrier. Token and session cases are rated high or critical in
+40\% and 38\% of cases. Data cases are rated high or critical in only 21\%. Of the 16 cases carried by objects the user
+created before revocation, 5 are rated low, 9 moderate, 2 high and none critical. These leaks typically expose
+titles, names or metadata rather than content, and the rating reflects that. A lower rating also means less
+attention. This may explain why the object-carried class recurs, and why some of its fixes were followed within months by
+advisories about sibling paths.
+
+\begin{table}[t]
+\centering\small
+\caption{GitHub severity rating by carrier (all 229 cases).}
+\label{tab:severity}
+\input{tables/severity_by_carrier.tex}
+\end{table}
+
+\paragraph{What a test must set up}
+The carriers translate directly into setup obligations for a test that is meant to catch these failures
+(Table~\ref{tab:setup}). The obligations are cumulative: a single revocation trigger should be tested against every row.
+The setup follows from the cases in our dataset and is not an evaluated procedure.
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{State a revocation test must create before the trigger, and what it must probe afterwards, by carrier.}
+\label{tab:setup}
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Carrier & Create before revocation & Probe after revocation \\
+\midrule
+\textsc{token} & every credential type the subject can hold: access and refresh tokens, API keys, personal access tokens, share links, remember-me cookies & each credential against each API, including token exchange and introspection \\
+\textsc{session} & a logged-in session per client or device & reuse of each session cookie \\
+\textsc{connection} & open WebSocket, SSE, SFTP or live-query subscriptions & sending on and receiving from each connection \\
+\textsc{data} & objects the subject creates: stars, watches, notifications, stopwatches, forks, historical records & every user-scoped listing and detail endpoint that renders those objects, field by field \\
+\textsc{async} & scheduled automations, webhooks, queued jobs & whether the work still runs or delivers \\
+\textsc{cache} & authorised requests that warm each cache & the same requests within the cache lifetime \\
+\textsc{check} & nothing; a fresh login suffices & authentication through every path: SSO callback, OIDC, token exchange, API tokens, CalDAV, password reset \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \subsection{RQ3: What is being revoked?}
 Table~\ref{tab:kind} crosses revocation kind with carrier. Logout and password change are the largest kind
 (79 of 229) and live almost entirely in sessions and tokens, consistent with prior measurement~\cite{loginplus}.
@@ -298,12 +428,36 @@ and membership removal (13) are where residual data and objects concentrate.
 \resizebox{\linewidth}{!}{\input{tables/kind_by_carrier.tex}}
 \end{table}
 
+\paragraph{Account deactivation: the status flag is checked on the main path only}
+Missing checks cluster in account revocation: 17 of the 31 \textsc{check} cases are account deactivation, locking or
+deletion. The advisory texts show one recurring shape. The disabled or pending status is enforced on the main
+login form but not on an alternative way of authenticating. Mautic let disabled users log in through an SSO plugin.
+Vikunja enforced status only on local login and token refresh, not on API tokens, CalDAV or OIDC, and its password
+reset silently re-activated disabled accounts. Gitea's OAuth2 callback re-enabled administrator-disabled accounts,
+first in general and then, after a first fix, for sources without refresh tokens. Keycloak issued tokens to disabled
+users through token exchange. Synapse let deactivated users log in under uncommon JWT or local-password
+configurations. Open WebUI let deactivated (\emph{pending}) accounts open terminal sessions over a WebSocket path that
+skipped the role check. A clean-state test catches these, but only if it tries every authentication path and not just
+the login form.
+
+\paragraph{Credential revocation: recorded but not consulted}
+Credential revocation failures are mostly \textsc{token} cases (19 of 35), and here a second shape recurs. The
+revocation is \emph{recorded}, but some validation path does not \emph{consult} the record. Casdoor's token exchange
+validated the JWT signature but never checked whether the subject token had been revoked. Open WebUI's HTTP handlers
+rejected Redis-revoked JWTs, but its realtime surfaces did not. Keycloak's introspection ignored the realm-level
+\texttt{notBefore} policy when a client-level one was also set. Admidio's introspection endpoint reported every token as
+active. These are entry-path gaps (pattern 3 in RQ4) applied to credentials.
+
 \paragraph{No weakness class captures revocation}
 The 229 cases carry 44 distinct CWE identifiers. CWE-613 (Insufficient Session Expiration) is the most common,
 yet it appears on only 107 cases (47\%). Eight CWEs are needed to cover 80\% of cases: CWE-613, 863, 287, 284, 384,
 862, 285 and 269. A search for revocation failures by weakness class would therefore miss about half of them. This
 is also why our candidate selection works on advisory text rather than CWE labels.
 
+
+The cases span nine package ecosystems: Go (66), PyPI (43), Packagist (42), Maven (34), npm (34), RubyGems (5),
+crates.io (3), NuGet (2) and Hex (2). A case can list several ecosystems. Revocation failures are therefore not
+concentrated in one language community. They follow where self-hosted web applications with user management are written.
 
 Figure~\ref{fig:year} shows advisories by publication year. The 2026 peak (98 cases through September)
 coincides with growth in advisory volume and with batches from a few reporters. The 2022 peak partly reflects
@@ -322,6 +476,10 @@ Revocation failures recur within projects: 18 of 125 projects have three or more
 OpenClaw 10, Open WebUI 9, Mattermost 8). Only 6 of 229 advisories state explicitly that an earlier fix was
 incomplete. However, reading the patches of the 15 object-carried cases and the advisory text of the recurring
 projects shows a regular structure.
+
+Recurrence is not only frequent but also similar in kind. Thirty-six projects have two or more cases, and together they
+account for 140 of the 229. In these projects, 63\% of later advisories share a carrier with an earlier advisory of
+the same project, and 55\% share a revocation kind. The other 89 projects have a single case.
 
 A fix takes one of two strategies. \emph{Clean-up-on-revoke} deletes or disables derived state when
 authority is withdrawn. \emph{Re-check-on-use} re-authorises the caller whenever derived state is read or
@@ -370,6 +528,36 @@ Field-level & Gitea (GHSA-44qc-pgvp-wx7v) & \texttt{repository} set to null, but
 \end{tabularx}
 \end{table}
 
+\paragraph{Fix strategies in the object-carried class}
+Of the 15 object-carried cases among the web-application candidates, 12 link to a patch. Eight fixes re-check on use only. Two combine re-check with
+cleanup: Gitea's stopwatch fix (\#36340) adds a read-time check and cleanup on collaborator removal, and
+the release-mail fix (\#36319) clears watches on the private transition and checks permission at send time. One fix
+prevents the problematic state from being created (Keycloak restricts updates to the realm-management client). One
+is part of a batch fix whose message does not describe the webhook change. Re-check-on-use dominates, and the
+follow-up advisories show that it carries the read-path and field-level obligations.
+
+\subsection{Case study: Gitea's revocation fixes in 2026}\label{sec:gitea}
+Gitea gives the clearest view of how incomplete fixes arise, because two waves of advisories touch the same
+feature set. On 23 January 2026 three advisories were published and fixed in v1.25.4. The first concerned stopwatches
+that still exposed issue titles after access was revoked (GHSA-j8xr-c56q-m8jj; fix \#36340). The second concerned release
+e-mails sent to users who had lost access when a repository became private (GHSA-8fwc-qjw5-rvgp; fix \#36319). The
+third concerned notification threads that exposed issue titles (GHSA-2vgv-hgv4-22mh, CVE-2026-20800; fix \#36339). Each
+fix addressed the reported path.
+
+On 21 July 2026 the follow-ups appeared. GHSA-qf2f-qh6p-7v89 reports that the CVE-2026-20800 fix covered only the notification
+endpoint, while \texttt{/user/starred} and \texttt{/user/times} still returned data for revoked users. It was confirmed at
+runtime on v1.25.4, the release that shipped the January fixes, and was ``reported as part of an incomplete-patch
+measurement study''. GHSA-q423-49rw-g9mh reports that the watch cleanup from \#36319 was wired into \texttt{MakeRepoPrivate}
+only, so the REST path \texttt{updateRepository} left watches in place. GHSA-44qc-pgvp-wx7v reports that after the notification
+fix the \texttt{repository} field was nulled but the \texttt{subject} field still carried private titles and live
+comment activity. GHSA-j2w3-9c3r-g83q, GHSA-66m4-5jjr-2rg5 and GHSA-wrf9-r3h7-7x5v add starred and watched metadata,
+webhooks created by removed collaborators, and fork synchronisation after the parent became private.
+
+Each of these July advisories falls into one of the four patterns. Each also concerns derived state that existed before the
+revocation: a star, a watch, a notification, a webhook or a fork link. A regression test written for a January fix would
+exercise only the path that the fix touched, so it would not catch the July cases. The probe in the next
+subsection mechanises one comparison that would have caught GHSA-q423: whether two triggers of the same kind clean up the same artifacts.
+
 \subsection{A source-only coverage probe}
 The first two patterns compare rows of a trigger$\times$carrier matrix, which suggests a static check. We
 built a regex-level probe (\texttt{static/revcov.py}) for Gitea. It discovers ``artifact'' models (tables
@@ -412,6 +600,31 @@ exercises every user-scoped read path and connection. The oracle must know the a
 revocation latency. Several advisories describe bounded windows, such as Grafana's ``few seconds'' or cache TTLs, that
 maintainers accepted or fixed case by case.
 
+\paragraph{For advisory authors and maintainers}
+Three of our cases could only be coded as \emph{unclear}, because the advisory says that access persists without saying
+where. Advisories that name the trigger (``removing a collaborator'') and the carrier (``existing WebSocket
+connections'', ``previously issued API tokens'') are easier to act on for downstream users, and they make incomplete
+fixes easier to spot. When a new advisory addresses a gap left by an earlier fix, linking the two, as several Gitea and
+OpenClaw advisories do, turns a repeated failure into a traceable one. Only 6 of 229 advisories do so explicitly.
+
+\paragraph{Why caches are rare in web applications}
+Three explanations fit the data, and we cannot separate them. First, application frameworks often
+invalidate caches on write, while sessions and issued tokens are designed to outlive individual requests. Second,
+cache-carried failures are bounded by a TTL, so they may be seen as tolerable latency rather than vulnerabilities and go
+unreported. Grafana's ``few seconds'' window is one such case that was reported. Third, some residual authority that sits in a cache may
+be described in advisories as a session or token problem. Whichever holds, a revocation test that only clears
+caches addresses a small fraction of reported failures.
+
+\paragraph{Lessons for LLM-assisted coding of advisories}
+Using two LLMs from different vendors as independent coders produced high agreement
+($\kappa=0.877$) and an adjudication trail that we could audit. The human re-code showed where that agreement hides error.
+Both models filled gaps in advisory text with a plausible mechanism, such as a residual grant, a cache or a missing check,
+where the text only said that access persisted. The human coder followed the codebook's no-inference rule and coded
+these cases as unclear. High agreement between two LLMs therefore does not show that they follow the codebook. It can also mean that they
+share a tendency to over-infer. We recommend three safeguards for similar studies: a codebook category for
+insufficient text, a blind human re-code stratified by label, and reporting agreement \emph{before} labels are revised in
+light of that re-code.
+
 \paragraph{For advisory databases}
 Revocation failures spread over 44 CWEs, and the most common one covers under half of them. A dedicated
 weakness label or advisory tag for ``authority not withdrawn'' would make the class searchable.
@@ -438,11 +651,30 @@ We study reported failures in projects covered by the GitHub Advisory Database, 
 ecosystems with package registries and projects that disclose actively. Reporting batches cluster: one Gitea
 batch dominates the object-carried cases, and 2026 contributes 98 of 229 cases. We therefore make no claim about how prevalent
 these failures are in deployed software, and no trend claim.
+We use only reviewed advisories, whose selection depends on GitHub's review pipeline~\cite{segal2026ghsareview}.
+
+\paragraph{Conclusion validity}
+Most of our quantitative claims are proportions over 187 or 229 cases, with no inferential test. Subgroup comparisons,
+such as severity by carrier or caches in web versus non-web software, rest on small cells (for example, 16 cache cases), and
+we present them as descriptive. The four incompleteness patterns are an analytical
+classification of 12 documented cases, not a frequency estimate.
 
 \paragraph{Reliability}
 The recall point estimate is 0.73. The sampling lower bound is uninformative for the largest residual stratum.
 The static probe was evaluated on one application with five known bugs and is not a tool evaluation.
 The dataset, codebook, adjudication log and scripts are released so that others can re-derive every number.
+
+%======================================================================
+\section{Future Work}
+%======================================================================
+Three directions follow. First, a state-preserving test generator that implements Table~\ref{tab:setup} and is
+evaluated against the 229 cases would turn the carrier taxonomy into a tool. Its hardest part is the oracle, because
+it must know each application's intended revocation latency. Second, the static probe could be rebuilt on a real
+program representation, such as Go's \texttt{go/ast} or CodeQL, with route-scope awareness, field-level rendering and
+artifacts that lack a creator field, and then evaluated on several applications. Third, prevalence in deployed
+software is unknown. A measurement that exercises revocation triggers on live instances, with operator consent, would
+complement a study of reported failures. Extending the dataset to OSV and NVD would also test whether our
+distributions depend on GitHub's review pipeline.
 
 %======================================================================
 \section{Conclusion}
@@ -453,15 +685,17 @@ Caches matter far less than expected. Fixes stay incomplete because revocation i
 that coverage explicit is a concrete target for both developers and tools.
 
 \section*{Data availability}
-\todo{Replication package: codebook, labels, adjudication log, recall samples, scripts, probe. Cite the
-advisory snapshot date rather than redistributing the database.}
+The dataset, codebook (v1.2), adjudication logs, recall-audit samples, human re-code, analysis scripts and the
+static probe are available at \url{https://github.com/mamamind47/revocation-failures-study}. Code is released under the MIT
+licence and data under CC-BY 4.0. Advisory excerpts come from the GitHub Advisory Database (CC-BY 4.0), snapshot commit
+\texttt{66975d7}. Untriaged probe output is withheld.
 
 \section*{Declaration of generative AI use}
 During this work the author used Claude (Anthropic) and Codex CLI (OpenAI) as two independent coders of
 advisory text, as described in Section~3.3. Claude was also used to write analysis scripts, draft
 parts of the manuscript and check references. All labels that enter the results were adjudicated with
 recorded reasons, and a blind human re-code was performed. The author reviewed and edited all content and
-takes full responsibility for the publication. \todo{Han to confirm wording against the current JSS policy.}
+takes full responsibility for the publication.
 
 \bibliographystyle{elsarticle-num}
 \bibliography{refs}

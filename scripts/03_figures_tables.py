@@ -58,6 +58,22 @@ lines = [f"{k.replace('_', '/').title()} & " + " & ".join(str(kc[(k, c)]) for c 
     "\\begin{tabular}{l" + "r" * (len(CARRIERS) + 1) + "}\n\\toprule\nKind & " + " & ".join(c.title() for c in CARRIERS)
     + " & Total \\\\\n\\midrule\n" + "\n".join(lines) + "\n\\bottomrule\n\\end{tabular}\n")
 
+# ---- Table: GitHub severity by carrier (all relevant) ----
+SEV = ["LOW", "MODERATE", "HIGH", "CRITICAL"]
+sev = {o["ghsa"]: (json.loads(paths[o["ghsa"]].read_text()).get("database_specific", {}).get("severity") or "UNKNOWN").upper()
+       for o in rel}
+sc = Counter((o["carrier"], sev[o["ghsa"]]) for o in rel)
+lines = []
+for c in CARRIERS:
+    n = sum(sc[(c, x)] for x in SEV)
+    if n == 0:
+        continue
+    hi = sc[(c, "HIGH")] + sc[(c, "CRITICAL")]
+    lines.append(f"{c.title()} & " + " & ".join(str(sc[(c, x)]) for x in SEV) + f" & {n} & {100 * hi / n:.0f}\\% \\\\")
+(T / "severity_by_carrier.tex").write_text(
+    "\\begin{tabular}{lrrrrrr}\n\\toprule\nCarrier & Low & Moderate & High & Critical & Total & High+Crit. \\\\\n\\midrule\n"
+    + "\n".join(lines) + "\n\\bottomrule\n\\end{tabular}\n")
+
 # ---- Table: recall strata ----
 s2 = json.load(open(D / "recall2_summary.json"))
 strata = [("Seven CWEs, CWE-613", 97, 97, 35, "35"), ("Seven CWEs, other", 3386, 250, 0, "41")]
