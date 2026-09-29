@@ -1,0 +1,342 @@
+[
+ {
+  "item": "R009",
+  "ghsa": "GHSA-6r7x-4q7g-h83j",
+  "fields": [
+   "carrier",
+   "fresh_state_detects"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "UNCLEAR",
+   "fresh_state_detects": "DEPENDS",
+   "revocation_kind": "MEMBERSHIP",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "DATA",
+   "fresh_state_detects": "Y",
+   "revocation_kind": "MEMBERSHIP",
+   "webapp": "Y"
+  },
+  "human_note": "ระบุว่าถอดสมาชิกแล้วแต่ไม่บอกกลไกสิทธิ์ค้าง จึงไม่ชัดว่าการเริ่มสถานะใหม่จะพบหรือไม่"
+ },
+ {
+  "item": "R011",
+  "ghsa": "GHSA-2xf7-hmf6-p64j",
+  "fields": [
+   "fresh_state_detects"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "CHECK",
+   "fresh_state_detects": "N",
+   "revocation_kind": "ACCOUNT",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "CHECK",
+   "fresh_state_detects": "Y",
+   "revocation_kind": "ACCOUNT",
+   "webapp": "Y"
+  },
+  "human_note": "การแข่งขันใน API หลังปิดบัญชีต้องอาศัย session เดิม; ไม่ใช่การเข้าสู่ระบบใหม่"
+ },
+ {
+  "item": "R016",
+  "ghsa": "GHSA-j8xr-c56q-m8jj",
+  "fields": [
+   "revocation_kind"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "DATA",
+   "fresh_state_detects": "N",
+   "revocation_kind": "MEMBERSHIP",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "DATA",
+   "fresh_state_detects": "N",
+   "revocation_kind": "PERMISSION",
+   "webapp": "Y"
+  },
+  "human_note": ""
+ },
+ {
+  "item": "R022",
+  "ghsa": "GHSA-rgv6-xp99-6mgj",
+  "fields": [
+   "relevant",
+   "carrier",
+   "fresh_state_detects",
+   "revocation_kind",
+   "webapp"
+  ],
+  "human": {
+   "relevant": "N",
+   "carrier": null,
+   "fresh_state_detects": null,
+   "revocation_kind": null,
+   "webapp": null
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "TOKEN",
+   "fresh_state_detects": "N",
+   "revocation_kind": "CREDENTIAL",
+   "webapp": "Y"
+  },
+  "human_note": ""
+ },
+ {
+  "item": "R028",
+  "ghsa": "GHSA-f7gq-h8jv-h3cq",
+  "fields": [
+   "carrier"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "TOKEN",
+   "fresh_state_detects": "N",
+   "revocation_kind": "LOGOUT_PWCHANGE",
+   "webapp": "N"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "SESSION",
+   "fresh_state_detects": "N",
+   "revocation_kind": "LOGOUT_PWCHANGE",
+   "webapp": "N"
+  },
+  "human_note": ""
+ },
+ {
+  "item": "R029",
+  "ghsa": "GHSA-pq65-77rc-7r8c",
+  "fields": [
+   "fresh_state_detects"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "DATA",
+   "fresh_state_detects": "Y",
+   "revocation_kind": "PERMISSION",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "DATA",
+   "fresh_state_detects": "N",
+   "revocation_kind": "PERMISSION",
+   "webapp": "Y"
+  },
+  "human_note": "composite role relationship ค้างอยู่แม้ถอนสิทธิ์เดิมและรีบูต"
+ },
+ {
+  "item": "R032",
+  "ghsa": "GHSA-c6w6-57jj-62vh",
+  "fields": [
+   "revocation_kind"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "DATA",
+   "fresh_state_detects": "N",
+   "revocation_kind": "MEMBERSHIP",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "DATA",
+   "fresh_state_detects": "N",
+   "revocation_kind": "PERMISSION",
+   "webapp": "Y"
+  },
+  "human_note": ""
+ },
+ {
+  "item": "R048",
+  "ghsa": "GHSA-wfhv-mj62-f5xh",
+  "fields": [
+   "carrier"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "UNCLEAR",
+   "fresh_state_detects": "DEPENDS",
+   "revocation_kind": "PERMISSION",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "CACHE",
+   "fresh_state_detects": "DEPENDS",
+   "revocation_kind": "PERMISSION",
+   "webapp": "Y"
+  },
+  "human_note": "ระบุเพียงช่วงสั้นหลังถอนสิทธิ์ ไม่ระบุแหล่งสถานะค้าง"
+ },
+ {
+  "item": "R049",
+  "ghsa": "GHSA-wmm3-h9qj-p5v6",
+  "fields": [
+   "carrier"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "SESSION",
+   "fresh_state_detects": "N",
+   "revocation_kind": "LOGOUT_PWCHANGE",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "TOKEN",
+   "fresh_state_detects": "N",
+   "revocation_kind": "LOGOUT_PWCHANGE",
+   "webapp": "Y"
+  },
+  "human_note": ""
+ },
+ {
+  "item": "R051",
+  "ghsa": "GHSA-275c-xpvc-jgfw",
+  "fields": [
+   "webapp"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "CACHE",
+   "fresh_state_detects": "DEPENDS",
+   "revocation_kind": "CREDENTIAL",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "CACHE",
+   "fresh_state_detects": "DEPENDS",
+   "revocation_kind": "CREDENTIAL",
+   "webapp": "N"
+  },
+  "human_note": "secret เดิมยังอยู่ใน runtime ช่วงหลัง reload; ระบุ cache ตามสถานะค้าง"
+ },
+ {
+  "item": "R068",
+  "ghsa": "GHSA-vx2m-jpxr-xv7w",
+  "fields": [
+   "fresh_state_detects"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "CACHE",
+   "fresh_state_detects": "DEPENDS",
+   "revocation_kind": "CREDENTIAL",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "CACHE",
+   "fresh_state_detects": "N",
+   "revocation_kind": "CREDENTIAL",
+   "webapp": "Y"
+  },
+  "human_note": "ต้องเตรียม context hint และรู้ path ขณะ share ยังใช้ได้; cache ระดับ hint"
+ },
+ {
+  "item": "R070",
+  "ghsa": "GHSA-4m82-p8cx-f94j",
+  "fields": [
+   "webapp"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "CONNECTION",
+   "fresh_state_detects": "N",
+   "revocation_kind": "LOGOUT_PWCHANGE",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "CONNECTION",
+   "fresh_state_detects": "N",
+   "revocation_kind": "LOGOUT_PWCHANGE",
+   "webapp": "N"
+  },
+  "human_note": "LIVE subscription ที่เปิดไว้ยังส่งข้อมูลตาม principal เดิมหลัง session ถูก invalidate"
+ },
+ {
+  "item": "R074",
+  "ghsa": "GHSA-2w46-vq8h-98vh",
+  "fields": [
+   "relevant",
+   "carrier",
+   "fresh_state_detects",
+   "revocation_kind",
+   "webapp"
+  ],
+  "human": {
+   "relevant": "N",
+   "carrier": null,
+   "fresh_state_detects": null,
+   "revocation_kind": null,
+   "webapp": null
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "TOKEN",
+   "fresh_state_detects": "N",
+   "revocation_kind": "OTHER",
+   "webapp": "Y"
+  },
+  "human_note": ""
+ },
+ {
+  "item": "R076",
+  "ghsa": "GHSA-p225-pc2x-4jpm",
+  "fields": [
+   "carrier",
+   "fresh_state_detects"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "UNCLEAR",
+   "fresh_state_detects": "DEPENDS",
+   "revocation_kind": "PERMISSION",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "CHECK",
+   "fresh_state_detects": "Y",
+   "revocation_kind": "PERMISSION",
+   "webapp": "Y"
+  },
+  "human_note": "ยังเข้าถึงได้แม้ token เก่าหมดอายุ แต่ไม่บอกว่าค้างในข้อมูลหรือจุดตรวจ"
+ },
+ {
+  "item": "R090",
+  "ghsa": "GHSA-66m4-5jjr-2rg5",
+  "fields": [
+   "carrier"
+  ],
+  "human": {
+   "relevant": "Y",
+   "carrier": "DATA",
+   "fresh_state_detects": "N",
+   "revocation_kind": "MEMBERSHIP",
+   "webapp": "Y"
+  },
+  "final": {
+   "relevant": "Y",
+   "carrier": "ASYNC",
+   "fresh_state_detects": "N",
+   "revocation_kind": "MEMBERSHIP",
+   "webapp": "Y"
+  },
+  "human_note": "webhook ที่สร้างก่อนถอนสมาชิกยังส่ง payload หลังถอน"
+ }
+]

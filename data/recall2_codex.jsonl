@@ -1,0 +1,600 @@
+{"ghsa":"GHSA-752q-72qc-rc66","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Session fixation, with no authority withdrawal described."}
+{"ghsa":"GHSA-4fwj-m62q-pp47","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Captured cookie is explicitly invalidated on logout."}
+{"ghsa":"GHSA-gmhj-xjfh-cf6m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Expired credentials are timeout, not withdrawal of authority."}
+{"ghsa":"GHSA-xf37-qcvf-7m57","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Installer accepts a malicious preexisting configuration; no revocation."}
+{"ghsa":"GHSA-wwj6-vghv-5p64","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Writable VM filesystem issue; no authority withdrawal."}
+{"ghsa":"GHSA-r57f-7xw3-q2r9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"User impersonation flaw without prior withdrawal of authority."}
+{"ghsa":"GHSA-jmmg-jqc7-5qf4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password brute-force authentication bypass; no revoked authority."}
+{"ghsa":"GHSA-45x9-q6vj-cqgq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"RequestDispatcher authentication bypass; no withdrawal described."}
+{"ghsa":"GHSA-4rmq-mc2c-r495","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Staking accounting after unbonding is not access authority."}
+{"ghsa":"GHSA-v797-hfv8-v2xm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Session fixation defense issue; no withdrawal described."}
+{"ghsa":"GHSA-2jq7-pgqq-gqqj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"CAPTCHA bypass is not residual withdrawn authority."}
+{"ghsa":"GHSA-m7gv-v8xx-v47w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Authentication and group-mapping bypass; no prior authority withdrawal."}
+{"ghsa":"GHSA-96qm-hwhp-2rm8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reusable time-based OTP is not revoked authority."}
+{"ghsa":"GHSA-6x3v-rw2q-9gx7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Session fixation protection issue; no withdrawal described."}
+{"ghsa":"GHSA-7gfg-6934-mqq2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"DTLS packet validation flaw; no authority withdrawal."}
+{"ghsa":"GHSA-6423-85cc-8gf6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Two-factor bypass; no authority withdrawal described."}
+{"ghsa":"GHSA-92ph-xm9v-cg3j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Session setting manipulation, not residual authority after withdrawal."}
+{"ghsa":"GHSA-w66h-c2vj-cm7f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Client-side upload restriction bypass; no revoked authority."}
+{"ghsa":"GHSA-8jvc-mcx6-r4cg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"OIDC path bypasses TOTP; no withdrawal of existing authority."}
+{"ghsa":"GHSA-8pmp-678w-c8xx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Signature verification mismatch; no authority withdrawal."}
+{"ghsa":"GHSA-2phx-w35g-x9vm","relevant":"Y","carrier":"TOKEN","fresh_state_detects":"N","revocation_kind":"LOGOUT_PWCHANGE","webapp":"Y","note":"Preexisting web-service tokens remain valid after password change."}
+{"ghsa":"GHSA-hrm3-3xm6-x33h","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Empty-token configuration bypasses authentication; no withdrawal."}
+{"ghsa":"GHSA-mrx3-gxjx-hjqj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"PKCE downgrade bypass; no prior authority withdrawal."}
+{"ghsa":"GHSA-wmv4-5w76-vp9g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"CAS service restriction bypass; no withdrawal event described."}
+{"ghsa":"GHSA-68wm-pfjf-wqp6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Malformed URI bypasses authentication; no revoked authority."}
+{"ghsa":"GHSA-m4rm-x2rr-357w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Incorrect static trust policy; no authority withdrawal."}
+{"ghsa":"GHSA-7cj4-gj8m-m2f7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Crafted-request authentication bypass; no withdrawal described."}
+{"ghsa":"GHSA-75vm-6w67-gwvp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"OIDC account-linking bypass; attacker never held withdrawn authority."}
+{"ghsa":"GHSA-p6fh-xc6r-g5hw","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Read-only members bypass write restrictions without a withdrawal event."}
+{"ghsa":"GHSA-m837-g268-mmv7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"SAML assertion modification bypass; no authority withdrawal."}
+{"ghsa":"GHSA-hp5w-w29m-vg63","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Invalid credentials may authenticate; no withdrawal described."}
+{"ghsa":"GHSA-3f8r-4qwm-r7jf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"LDAP password authentication bypass; no revoked authority."}
+{"ghsa":"GHSA-622h-h2p8-743x","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Forgeable JWT issue; no credential revocation event."}
+{"ghsa":"GHSA-c38m-v4m2-524v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"AJP request spoofing bypass; no withdrawal described."}
+{"ghsa":"GHSA-5fg6-wrq4-w5gh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"HTTP upgrade bypasses authentication; no withdrawn authority."}
+{"ghsa":"GHSA-qwwj-qj3f-9hv7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"XML signature wrapping bypass; no withdrawal described."}
+{"ghsa":"GHSA-c32w-3cqh-f6jx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password-reset account takeover; no residual revoked authority."}
+{"ghsa":"GHSA-4f7h-9j2x-cmr4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Digest integrity bypass; no withdrawal described."}
+{"ghsa":"GHSA-mfj5-cf8g-g2fv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Cross-user cookie replacement in a client library; no withdrawal."}
+{"ghsa":"GHSA-4hq8-gmxx-h6w9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Signed XML parsing vulnerability; no authority withdrawal."}
+{"ghsa":"GHSA-gmvf-9v4p-v8jc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"JWT library accepts forged empty-key signatures; no withdrawal."}
+{"ghsa":"GHSA-h5f5-rj4r-42f6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Arbitrary-password LDAP login; no withdrawn authority."}
+{"ghsa":"GHSA-rg58-xhh7-mqjw","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Multipart denial of service; no authority withdrawal."}
+{"ghsa":"GHSA-f6qq-3m3h-4g42","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"OAuth identity collision; no authority withdrawal event."}
+{"ghsa":"GHSA-j76j-rqwj-jmvv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-6vx8-pcwv-xhf4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Signature algorithm confusion in library; no revocation."}
+{"ghsa":"GHSA-mhjq-8c7m-3f7p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Unauthenticated proxy bypass; attacker had no withdrawn authority."}
+{"ghsa":"GHSA-cq9c-55r7-455x","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unsecured alternate console endpoint; no withdrawal event."}
+{"ghsa":"GHSA-g446-98w2-8p5w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"HTTP client cookie scope flaw; no authority withdrawal."}
+{"ghsa":"GHSA-r2vw-p77f-vc27","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Logout timeout bypass concerns expiry, not authority withdrawal."}
+{"ghsa":"GHSA-qgjq-m78x-4gm8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"REST API omits authorization checks; no withdrawal event."}
+{"ghsa":"GHSA-8h89-34w2-jpfm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Login action bypasses static view rights; no withdrawal."}
+{"ghsa":"GHSA-2wcm-vx67-3x4q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-hwrc-w5gg-f335","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password-hash authentication bypass; no withdrawn authority."}
+{"ghsa":"GHSA-3c93-f73f-qc9h","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Unsigned OAuth callback impersonation; no withdrawal event."}
+{"ghsa":"GHSA-f6hc-c5jr-878p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password-reset authentication bypass; no residual withdrawn authority."}
+{"ghsa":"GHSA-9mxg-p873-6793","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reusable CAPTCHA answer is not withdrawn authority."}
+{"ghsa":"GHSA-cq6m-74r4-x77g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reset-link expiry failure is timeout, not withdrawal."}
+{"ghsa":"GHSA-5c6w-f4w2-2grp","relevant":"Y","carrier":"TOKEN","fresh_state_detects":"N","revocation_kind":"ACCOUNT","webapp":"Y","note":"Preexisting BotPassword remains usable after CentralAuth account lock."}
+{"ghsa":"GHSA-rhvr-6w8c-6v7w","relevant":"Y","carrier":"SESSION","fresh_state_detects":"N","revocation_kind":"OTHER","webapp":"Y","note":"Active user sessions survive conversion of the user into a bot."}
+{"ghsa":"GHSA-87p9-x75h-p4j2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthenticated settings endpoint; no authority withdrawal."}
+{"ghsa":"GHSA-jxmr-2h4q-rhxp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"WebSocket endpoint lacks authentication; no withdrawal event."}
+{"ghsa":"GHSA-gqmh-5xmq-3fhg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Session fixation; no authority withdrawal described."}
+{"ghsa":"GHSA-gxp5-mv27-vjcj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Unauthenticated encryption mode in library; no revocation."}
+{"ghsa":"GHSA-qhq8-xwqv-pvv9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Live authentication tokens leak to logs; no withdrawal."}
+{"ghsa":"GHSA-8r6w-3qq5-4p4r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"JWT purpose confusion bypasses static permission; no withdrawal."}
+{"ghsa":"GHSA-9475-xg6m-j7pw","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"SAML subject-confirmation validation flaw; no authority withdrawal."}
+{"ghsa":"GHSA-4qmm-cv4r-qfr4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Session fixation gives attacker victim session; no withdrawal."}
+{"ghsa":"GHSA-7rg2-qxmf-hhx9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Session fixation in authentication library; no withdrawal."}
+{"ghsa":"GHSA-frc2-w2cc-x794","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthenticated log retrieval and session theft; no withdrawal."}
+{"ghsa":"GHSA-8wrg-m8vm-5fvj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Authentication bypass advisory describes no withdrawal."}
+{"ghsa":"GHSA-q56r-mw39-944g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Weak salt comparison permits authentication bypass; no withdrawal."}
+{"ghsa":"GHSA-2865-hh9g-w894","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Improper refresh sign-in permits account impersonation; no withdrawal."}
+{"ghsa":"GHSA-jgj9-6v78-6g8m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Anonymous request inherits node identity; no withdrawal event."}
+{"ghsa":"GHSA-6g38-8j4p-j3pr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"OAuth email verification bypass; no withdrawn authority."}
+{"ghsa":"GHSA-6m48-jxwx-76q7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Login request injection and fixation; no withdrawal described."}
+{"ghsa":"GHSA-g434-3q2j-hj4r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Framework session fixation; no authority withdrawal."}
+{"ghsa":"GHSA-j84c-j8qm-g47r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Passwordless username authentication bypass; no withdrawal."}
+{"ghsa":"GHSA-mxh2-ccgj-8635","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Basic authentication prefix bypass; no withdrawal event."}
+{"ghsa":"GHSA-wjqw-r9x4-j59v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Credentialless signup creates new authority, not residual authority."}
+{"ghsa":"GHSA-97cv-6pjf-5f9q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"SSH client skips initial authentication; no withdrawal event."}
+{"ghsa":"GHSA-2v2f-mvfg-ph56","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Header bypass reuses operator credential; attacker had no withdrawn authority."}
+{"ghsa":"GHSA-729q-fcgp-r5xh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Denied uploads leave temporary files; no authority withdrawal."}
+{"ghsa":"GHSA-38r5-34mr-mvm7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Alternate API path bypasses authentication; no withdrawal."}
+{"ghsa":"GHSA-j2q8-xx3q-8fqh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"TLS client authentication fails open; no withdrawn authority."}
+{"ghsa":"GHSA-rxq3-gm4p-5fj4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Example digest authentication bypass; no authority withdrawal."}
+{"ghsa":"GHSA-4w3q-qpfq-v992","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Noncanonical identifier bypasses access-key authentication; no withdrawal."}
+{"ghsa":"GHSA-6cgh-hjpw-q3gq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Challenge signature verification omission; no withdrawal event."}
+{"ghsa":"GHSA-9gw6-46qc-99vr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthenticated MCP execution leaks operator token; no withdrawn authority."}
+{"ghsa":"GHSA-m5q5-8mfw-p2hr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Weak secret permits forged JWTs; no revocation event."}
+{"ghsa":"GHSA-2jjq-x548-rhpv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Untrusted cached data escapes sandbox; no authority withdrawal."}
+{"ghsa":"GHSA-gv7r-3mr9-h5x8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reset-link poisoning enables takeover; no residual withdrawn authority."}
+{"ghsa":"GHSA-wr2v-9rpq-c35q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Gateway omits TLS authentication for configured endpoints; no withdrawal."}
+{"ghsa":"GHSA-hh33-46q4-hwm2","relevant":"Y","carrier":"TOKEN","fresh_state_detects":"N","revocation_kind":"ACCOUNT","webapp":"Y","note":"Deleted user's old credentials revive when the username is recreated."}
+{"ghsa":"GHSA-pxf8-6wqm-r6hh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Hard-coded null password authenticates OIDC users; no withdrawal."}
+{"ghsa":"GHSA-x3pr-vrhq-vq43","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Classic session fixation; no authority withdrawal."}
+{"ghsa":"GHSA-g8pg-33v4-9r96","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Authentication bypass advisory describes no withdrawal event."}
+{"ghsa":"GHSA-748r-5r8q-273m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Static dataset permission check missing; no withdrawal."}
+{"ghsa":"GHSA-r4v4-3jj7-jc29","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Agent never requires client certificate; no withdrawal."}
+{"ghsa":"GHSA-ggp9-c99x-54gp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Shared TLS credentials permit component impersonation; no withdrawal."}
+{"ghsa":"GHSA-c545-x2rh-82fc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Illegitimate LDAP account link persists; authority was never legitimate."}
+{"ghsa":"GHSA-vp29-5652-4fw9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"TSIG verification bypass; no prior authority withdrawal."}
+{"ghsa":"GHSA-xf9f-32gh-h2w4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"SOAP security processing bypass; no withdrawal event."}
+{"ghsa":"GHSA-wgpj-7c2j-vfjm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password-reset link poisoning; no residual withdrawn authority."}
+{"ghsa":"GHSA-mvxp-3j62-jqr6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"REST API omits authentication constraints; no withdrawal."}
+{"ghsa":"GHSA-8783-3wgf-jggf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Public-route regex bypasses authentication; no withdrawn authority."}
+{"ghsa":"GHSA-52xp-w8hr-xv3c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"MFA challenge bypass; no authority withdrawal."}
+{"ghsa":"GHSA-246w-jgmq-88fg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Denied unauthenticated VPN client is mistakenly admitted; no withdrawal."}
+{"ghsa":"GHSA-2x3r-7jgm-gh8x","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Insecure upload permission enables code execution; no withdrawal."}
+{"ghsa":"GHSA-p2cj-86v4-7782","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Authorization header leaks across redirects; no withdrawal event."}
+{"ghsa":"GHSA-cgr9-h9qq-x9fx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-rv62-6f56-j83w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"OAuth email verification weakness; no authority withdrawal."}
+{"ghsa":"GHSA-mg2g-8pwj-r2j2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Basic authentication path bypasses MFA; no withdrawal."}
+{"ghsa":"GHSA-5w5c-3g26-8mmc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthorized revocation of others' connections is out of scope."}
+{"ghsa":"GHSA-vpfp-5gwq-g533","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"JWT authentication bypass; no withdrawn authority."}
+{"ghsa":"GHSA-8wf2-3ggj-78q9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"User disables future two-factor checks; no authority withdrawal."}
+{"ghsa":"GHSA-22m3-c7vp-49fj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password-reset poisoning enables takeover; no residual withdrawn authority."}
+{"ghsa":"GHSA-47r2-phr8-m8cp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Authentication data expires by timeout, not withdrawal."}
+{"ghsa":"GHSA-gx5g-xcxj-cx2w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Remote execution authentication bypass; no withdrawal described."}
+{"ghsa":"GHSA-j26g-95ph-2mwv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reusable single-use reset link is explicitly out of scope."}
+{"ghsa":"GHSA-gg9x-qcx2-xmrh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"JWT library accepts empty HMAC key; no withdrawal."}
+{"ghsa":"GHSA-4j59-vv55-q6h3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Public certificate accepted without private-key proof; no withdrawal."}
+{"ghsa":"GHSA-ccp5-gg58-pxfm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Upload permission override causes denial of service; no withdrawal."}
+{"ghsa":"GHSA-6m9f-8vwq-97pm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Filesystem permission creation flaw; no authority withdrawal."}
+{"ghsa":"GHSA-v3q9-2p3m-7g43","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Reusable single-use client assertion is explicitly out of scope."}
+{"ghsa":"GHSA-gmph-wf7j-9gcm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Debug-function authentication bypass; no withdrawal described."}
+{"ghsa":"GHSA-gvrq-cg5r-7chp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"STOMP requests skip initial authentication; no withdrawal."}
+{"ghsa":"GHSA-gc7p-j5xm-xxh2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Registration API writes private fields; no authority withdrawal."}
+{"ghsa":"GHSA-2p82-5wwr-43cw","relevant":"Y","carrier":"CHECK","fresh_state_detects":"Y","revocation_kind":"ACCOUNT","webapp":"Y","note":"Password reset bypasses disabled-directory-account validation on later login."}
+{"ghsa":"GHSA-9v78-h226-2rmq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malicious OpenID provider permits impersonation; no withdrawal."}
+{"ghsa":"GHSA-jrv5-8w28-4265","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Empty LDAP password authentication bypass; no withdrawal."}
+{"ghsa":"GHSA-p44q-vqpr-4xmg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Empty token may match database user; no withdrawal event."}
+{"ghsa":"GHSA-gjjc-pcwp-c74m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reusable WebAuthn assertion is a single-use-token issue."}
+{"ghsa":"GHSA-v2rp-9cpj-pfw2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Alternate PAM service bypasses configured authentication; no withdrawal."}
+{"ghsa":"GHSA-m3cq-xcx9-3gvm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Image signature policy bypass; no withdrawn authority."}
+{"ghsa":"GHSA-r578-pj6f-r4ff","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"New registration merges into another account; no prior authority."}
+{"ghsa":"GHSA-ppjq-qxhx-m25f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"WS-Federation authentication bypass; no withdrawal."}
+{"ghsa":"GHSA-4rxr-27mm-mxq9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Email login token verification omission; no revocation event."}
+{"ghsa":"GHSA-g8pj-r55q-5c2v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Request object cleanup leak; no authority withdrawal."}
+{"ghsa":"GHSA-v9hx-v6vf-g36j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Cloned authenticator detection failure; no withdrawal described."}
+{"ghsa":"GHSA-jr66-9ghf-6gp3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Session fixation; no authority withdrawal."}
+{"ghsa":"GHSA-h698-r4hm-w94p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Payment notification validation bypass; no withdrawn authority."}
+{"ghsa":"GHSA-856q-xv3c-7f2f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Unauthenticated denial of service; no authority withdrawal."}
+{"ghsa":"GHSA-5gvm-hrw5-h6xf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"LDAP bind configuration bypass; no withdrawal event."}
+{"ghsa":"GHSA-9qv9-8xv6-5p35","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthorised password reset withdraws another user's credential."}
+{"ghsa":"GHSA-246r-r2wf-frhx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password reset spoofing; no residual withdrawn authority."}
+{"ghsa":"GHSA-mwhf-6mjm-6w3h","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password reminder answers exposed; no authority withdrawal."}
+{"ghsa":"GHSA-4whx-7p29-mq22","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Constructed login request bypasses authentication; no withdrawal."}
+{"ghsa":"GHSA-rg35-5v25-mqvp","relevant":"Y","carrier":"SESSION","fresh_state_detects":"N","revocation_kind":"LOGOUT_PWCHANGE","webapp":"Y","note":"Session state survives logout cleanup and is reused by another user."}
+{"ghsa":"GHSA-h8m9-jgf8-vwvp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cross-tenant SAML binding flaw; attacker never held withdrawn authority."}
+{"ghsa":"GHSA-rwg5-2pv9-633w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Session fixation because login retains session; no withdrawal."}
+{"ghsa":"GHSA-49qv-h8pm-73pf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Improper authentication advisory describes no withdrawal."}
+{"ghsa":"GHSA-fhvv-p968-6vvj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Static license-file permission mismatch; no withdrawal event."}
+{"ghsa":"GHSA-26rv-h2hf-3fw4","relevant":"Y","carrier":"TOKEN","fresh_state_detects":"N","revocation_kind":"ACCOUNT","webapp":"Y","note":"JWT survives account deletion and authenticates as a later reused identifier."}
+{"ghsa":"GHSA-2fvj-hgj9-j2gr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Digest password encoding collision; no authority withdrawal."}
+{"ghsa":"GHSA-g2j6-57v7-gm8c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Container policy bypass; no withdrawal event."}
+{"ghsa":"GHSA-g86p-hgx5-2pfh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"OAuth token permits victim impersonation; no withdrawn authority."}
+{"ghsa":"GHSA-hf2m-j98r-4fqw","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Token-verification logic exposes master-token access; no revocation."}
+{"ghsa":"GHSA-9mrv-8pvf-hf4m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"JWT audience and issuer validation missing; no withdrawal."}
+{"ghsa":"GHSA-3mcx-6wxm-qr8v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Two-factor mode permits password bypass; no withdrawal."}
+{"ghsa":"GHSA-8fx8-pffw-w498","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Arbitrary file deletion endpoint; no authority withdrawal."}
+{"ghsa":"GHSA-hfmf-q69j-6m5p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reusable TOTP is not withdrawn authority."}
+{"ghsa":"GHSA-wf33-6x33-wcf9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Duplicate usernames confuse identity; no withdrawal event."}
+{"ghsa":"GHSA-fvcj-hvfw-7f2v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Crafted claim authenticates improperly; no authority withdrawal."}
+{"ghsa":"GHSA-6xh8-8pfv-53vx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Empty database password permits login; no withdrawal."}
+{"ghsa":"GHSA-p62r-7637-3wwc","relevant":"Y","carrier":"TOKEN","fresh_state_detects":"N","revocation_kind":"LOGOUT_PWCHANGE","webapp":"N","note":"Hijacked remember-me cookie survives password reset and logout."}
+{"ghsa":"GHSA-8fhh-hf9w-55p7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Magic-hash password authentication bypass; no withdrawal."}
+{"ghsa":"GHSA-992q-9gwp-7r79","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unverified email enables illegitimate account linking; no withdrawn authority."}
+{"ghsa":"GHSA-phw8-fw9g-v3xc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Null authenticator permits initial broker access; no withdrawal."}
+{"ghsa":"GHSA-5jfq-x6xp-7rw2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Required-action bypass avoids two-factor setup; no withdrawal."}
+{"ghsa":"GHSA-f794-r6xc-hf3v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"OAuth error mishandling grants initial authorization; no withdrawal."}
+{"ghsa":"GHSA-3jxw-cv35-2mmv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Socket attack bypasses gateway authentication; no withdrawal."}
+{"ghsa":"GHSA-g475-pch5-6wvv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Database failure enables default credentials; no withdrawal."}
+{"ghsa":"GHSA-mv64-86g8-cqq7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Late security checks enable denial of service; no withdrawal."}
+{"ghsa":"GHSA-qpg4-4w7w-2mq5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Channel parsing bypasses subscription authentication; no withdrawal."}
+{"ghsa":"GHSA-xwwr-4h3p-r22c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Empty-secret signature bypass permits initial access; no withdrawal."}
+{"ghsa":"GHSA-mf98-r2gf-2x3w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Token validation omitted on APIs; no authority withdrawal."}
+{"ghsa":"GHSA-36qh-35cm-5w2w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Username variation bypasses authentication protections; no withdrawal."}
+{"ghsa":"GHSA-cmc7-mfmr-xqrx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Proxy authorization parsing error; no authority withdrawal."}
+{"ghsa":"GHSA-26c5-ppr8-f33p","relevant":"Y","carrier":"CHECK","fresh_state_detects":"Y","revocation_kind":"ACCOUNT","webapp":"Y","note":"Login paths fail to check that the user was deactivated."}
+{"ghsa":"GHSA-vcgg-hp4r-87gx","relevant":"Y","carrier":"SESSION","fresh_state_detects":"N","revocation_kind":"LOGOUT_PWCHANGE","webapp":"Y","note":"Existing sessions remain valid after the user changes password."}
+{"ghsa":"GHSA-f6jp-j6w3-w9hm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Crafted HTTP request bypasses authentication; no withdrawal."}
+{"ghsa":"GHSA-hq9p-pm7w-8p54","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Database driver downgrades authentication protection; no withdrawal."}
+{"ghsa":"GHSA-qxvm-r42f-5p8j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Shared-secret caller impersonates arbitrary users; no withdrawn authority."}
+{"ghsa":"GHSA-32w7-9whp-cjp9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Active session leaks over cleartext; no withdrawal event."}
+{"ghsa":"GHSA-cmwh-g2h8-c222","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"OIDC subject collation collision enables impersonation; no withdrawal."}
+{"ghsa":"GHSA-2f4r-34m4-3w8q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Brute-forceable cookie authentication tag; no revocation."}
+{"ghsa":"GHSA-vg44-fw64-cpjx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Library signs with wrong account after restore; no withdrawal."}
+{"ghsa":"GHSA-35c5-28pg-2qg4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Null-password LDAP bind bypass; no authority withdrawal."}
+{"ghsa":"GHSA-453r-g2pg-cxxq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Invalid initial UI token is accepted; no withdrawn authority."}
+{"ghsa":"GHSA-vq6g-g6c7-5f2j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"SAML association enables illegitimate persistent account link."}
+{"ghsa":"GHSA-cpfp-m5qw-c4r3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Insecure task permissions enable code execution; no withdrawal."}
+{"ghsa":"GHSA-4gm4-c4mh-4p7w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"OAuth path bypasses MFA; no authority withdrawal."}
+{"ghsa":"GHSA-c3p4-vm8f-386p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Nonexistent username bypasses initial authentication; no withdrawal."}
+{"ghsa":"GHSA-r3hf-q3mf-7h6w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"TLS certificate validation flaw; no authority withdrawal."}
+{"ghsa":"GHSA-7gm6-w7mx-58cr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password-reset link poisoning; no residual withdrawn authority."}
+{"ghsa":"GHSA-4c39-hj99-5h2r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Crafted OpenID token enables impersonation; no withdrawal."}
+{"ghsa":"GHSA-369m-2gv6-mw28","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Log escape injection in authentication library; no withdrawal."}
+{"ghsa":"GHSA-mffc-9gx5-99g3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Kerberos KDC authentication omission; no authority withdrawal."}
+{"ghsa":"GHSA-7rg2-cxvp-9p7p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Authentication cache poisoning; no prior authority withdrawal."}
+{"ghsa":"GHSA-w4pr-4vjg-hffh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Forwarded room-key validation flaw; no authority withdrawal."}
+{"ghsa":"GHSA-3p2h-wqq4-wf4h","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Malformed header denial of service; no withdrawal."}
+{"ghsa":"GHSA-2p7x-jcr3-7p2c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Empty SOAP security token bypasses authentication; no withdrawal."}
+{"ghsa":"GHSA-gv4m-v8c8-hr3g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Social-login binding path bypasses MFA; no withdrawal."}
+{"ghsa":"GHSA-hp74-gm6m-2qm5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Weaker login method bypasses reauthentication; no authority withdrawal."}
+{"ghsa":"GHSA-rv89-wch8-c574","relevant":"Y","carrier":"DATA","fresh_state_detects":"Y","revocation_kind":"OTHER","webapp":"Y","note":"Verified status persists after changing to an unverified email."}
+{"ghsa":"GHSA-hm57-h27x-599c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Desktop SSO issues duplicate sessions; no withdrawal event."}
+{"ghsa":"GHSA-6cq5-8cj7-g558","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"One session cookie crosses static session scopes; no withdrawal."}
+{"ghsa":"GHSA-5959-4x58-r8c2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reset-link expiry is timeout, not authority withdrawal."}
+{"ghsa":"GHSA-qc43-pgwq-3q2q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Crafted URL bypasses static ACL; no withdrawal."}
+{"ghsa":"GHSA-22vc-5pgw-644q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthenticated endpoint leaks administrator credentials; no withdrawal."}
+{"ghsa":"GHSA-2cm5-f78c-h2c8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"CLI command lacks permission checks; no withdrawal event."}
+{"ghsa":"GHSA-9vxc-g2jx-qj3p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Substring comparison permits access-key guessing; no withdrawal."}
+{"ghsa":"GHSA-5rxp-2rhr-qwqv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Session fixation at login; no authority withdrawal."}
+{"ghsa":"GHSA-f7q4-9gwv-6774","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Improper authentication enables privilege escalation; no withdrawal described."}
+{"ghsa":"GHSA-56r6-ccm5-8hg3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Old smart-wallet deployment issue; no authority withdrawal."}
+{"ghsa":"GHSA-7mgc-c7pq-3rr3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Pending-login flow lets attacker replace MFA secret; no withdrawal."}
+{"ghsa":"GHSA-p358-58jj-hp65","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Web console never requires authentication; no withdrawal."}
+{"ghsa":"GHSA-5cjr-78cq-3wrg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password-reset header poisoning; no residual withdrawn authority."}
+{"ghsa":"GHSA-4pjx-86pg-x4j5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"SAML login session fixation; no authority withdrawal."}
+{"ghsa":"GHSA-rr6r-p7rw-369c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Signup session fixation; no withdrawal event."}
+{"ghsa":"GHSA-p978-56hq-r492","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Migration grants excessive folder access; no withdrawal."}
+{"ghsa":"GHSA-73jp-3c67-hjfv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Crafted token bypasses issuer validation; no withdrawal."}
+{"ghsa":"GHSA-4qx8-j9vh-2628","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Session hijacking defense fails on User-Agent change; no withdrawal."}
+{"ghsa":"GHSA-v683-rcxx-vpff","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password-reset username enumeration; no authority withdrawal."}
+{"ghsa":"GHSA-w7h9-8wr4-hwqh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Session fixation; no authority withdrawal event."}
+{"ghsa":"GHSA-hf33-q6cf-c66f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reusable TOTP is not withdrawn authority."}
+{"ghsa":"GHSA-8fww-64cx-x8p5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Cancelled client connection leaks responses; no withdrawal."}
+{"ghsa":"GHSA-89vc-vf32-ch59","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Manager endpoints never require authentication; no withdrawal."}
+{"ghsa":"GHSA-wm25-j4gw-6vr3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"JWT bypass and SQL injection; no authority withdrawal."}
+{"ghsa":"GHSA-4m69-67m6-prqp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Block-processing cache enables denial of service; no withdrawal."}
+{"ghsa":"GHSA-m3hp-8546-5qmr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-w73w-5m7g-f7qc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"JWT audience parsing bypasses initial access restrictions."}
+{"ghsa":"GHSA-jfp7-79g7-89rf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Username ambiguity permits different-account login; no withdrawal."}
+{"ghsa":"GHSA-grjv-gjgr-66g2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Authorization service incorrectly denies access; no residual authority."}
+{"ghsa":"GHSA-96c6-m98x-hxjx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Session binding validators are ineffective; no withdrawal event."}
+{"ghsa":"GHSA-h574-6646-vfxx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Limited users access statically forbidden resources; no withdrawal."}
+{"ghsa":"GHSA-p373-jqfm-j6wr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Weak object deserialization authentication; no withdrawal."}
+{"ghsa":"GHSA-q9mp-79cp-9g8j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Mutual TLS verification omitted; no authority withdrawal."}
+{"ghsa":"GHSA-qvmc-92vg-6r35","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Spoofed user ID reaches Jira without authentication; no withdrawal."}
+{"ghsa":"GHSA-pp4w-9x82-6r47","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-436g-2f92-cvhh","relevant":"Y","carrier":"CHECK","fresh_state_detects":"Y","revocation_kind":"PERMISSION","webapp":"Y","note":"Plugin continues honoring a permission after it is disabled."}
+{"ghsa":"GHSA-wpmr-8h3q-fwj7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Wildcard identity lookup binds login to another account."}
+{"ghsa":"GHSA-rw9x-pxqx-q789","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Elevated-session verification bypass; no authority withdrawal described."}
+{"ghsa":"GHSA-9vf8-xgwm-97r8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"PDF endpoint lacks authentication; no withdrawal event."}
+{"ghsa":"GHSA-rq84-p6rr-vf89","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cross-client OAuth token exchange permits account takeover; no withdrawal."}
+{"ghsa":"GHSA-c7vg-w8q8-c3wf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-9phw-7h96-q3rv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Remember-me path bypasses two-factor authentication; no withdrawal."}
+{"ghsa":"GHSA-q39c-5vh5-vw2p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Multifactor secret handling flaw; no withdrawal described."}
+{"ghsa":"GHSA-r82w-3phg-qvr4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Key reuse across login mechanisms; no withdrawal event."}
+{"ghsa":"GHSA-j5hq-5jcr-xwx7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Watch requests bypass existing resource permissions; no withdrawal."}
+{"ghsa":"GHSA-7j6w-p859-464f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Duplicate account emails create identity ambiguity; no withdrawal."}
+{"ghsa":"GHSA-47vg-483w-hp3m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Session fixation; no authority withdrawal."}
+{"ghsa":"GHSA-7fhr-2694-rg79","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Session fixation in authentication framework; no withdrawal."}
+{"ghsa":"GHSA-4mh8-9wq6-rjxg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unsigned SAML response enables impersonation; no withdrawal."}
+{"ghsa":"GHSA-q6qc-xp4q-rjq5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Component API lacks authentication; no withdrawal event."}
+{"ghsa":"GHSA-pxv5-5vmp-3jj4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Protocol downgrade bypasses Kerberos authentication; no withdrawal."}
+{"ghsa":"GHSA-rgjg-66cx-5x9m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Predictable remember-me cookie enables impersonation; no withdrawal."}
+{"ghsa":"GHSA-fc26-m9pf-v56q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Missing webhook secret permits forged events; no withdrawal."}
+{"ghsa":"GHSA-rh9j-f5f8-rvgc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Certificate validation omission enables authentication bypass."}
+{"ghsa":"GHSA-c7xw-p58w-h6fj","relevant":"Y","carrier":"DATA","fresh_state_detects":"Y","revocation_kind":"OTHER","webapp":"Y","note":"Verified state persists after the user changes email."}
+{"ghsa":"GHSA-8m3c-c723-h4p4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Mutable provider identifier causes account confusion; no withdrawal."}
+{"ghsa":"GHSA-qpq9-jpv4-6gwr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Anyone can register a first security device; no withdrawal."}
+{"ghsa":"GHSA-33qg-7wpp-89cq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Forged cookie creates session authority; no prior withdrawal."}
+{"ghsa":"GHSA-fv4q-wm8c-wjg4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Anonymous LDAP bind accepts any password; no withdrawal."}
+{"ghsa":"GHSA-rmxw-jxxx-4cpc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Matrix allowlist identity confusion; no withdrawal event."}
+{"ghsa":"GHSA-v923-w3x8-wh69","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Session regeneration behavior does not state residual authority."}
+{"ghsa":"GHSA-m9gh-789g-q5pv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Crafted certificate enables user impersonation; no withdrawal."}
+{"ghsa":"GHSA-pcqv-c46v-2p4v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Local retry-file symlink overwrite; no authority withdrawal."}
+{"ghsa":"GHSA-hr65-qq6p-87r4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cross-cluster query omits static document permissions; no withdrawal."}
+{"ghsa":"GHSA-3r7g-wrpr-j5g4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Alternate admin login bypasses MFA; no withdrawal."}
+{"ghsa":"GHSA-xxpw-32hf-q8v9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Exposed session store permits session forgery; no withdrawal."}
+{"ghsa":"GHSA-v936-x3j5-c76j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Token-cache collision returns another user's token; no withdrawal."}
+{"ghsa":"GHSA-wq59-4q6r-635r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Hardcoded JWT key enables account impersonation; no withdrawal."}
+{"ghsa":"GHSA-3fhf-6939-qg8p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Redirect cookie handling enables fixation or disclosure; no withdrawal."}
+{"ghsa":"GHSA-2894-qcqf-g23g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Services accessible without active authenticated session; no withdrawal."}
+{"ghsa":"GHSA-c5mj-39cf-3pp5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Account editing may persist weak credentials; no withdrawal."}
+{"ghsa":"GHSA-v33x-prhc-gph5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Null stored password accepts literal null; no withdrawal."}
+{"ghsa":"GHSA-xp2m-98x8-rpj6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthenticated WebSocket receives broadcasts; no withdrawal event."}
+{"ghsa":"GHSA-wvj5-r78r-hhfq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Empty-password LDAP bind bypass; no withdrawal."}
+{"ghsa":"GHSA-m93w-4fxv-r35v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Pre-account OAuth linking enables takeover; no withdrawn authority."}
+{"ghsa":"GHSA-g38m-r43w-p2q7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Pre-account OAuth linking enables takeover; no withdrawal."}
+{"ghsa":"GHSA-6gxq-f64p-5w6f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Pixel-cache server buffer over-read; no authority withdrawal."}
+{"ghsa":"GHSA-8fcc-w5hv-4gxv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Malformed introspection response bypasses authentication; no withdrawal."}
+{"ghsa":"GHSA-qf8x-vqjv-92gr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Certificate URL validation permits authentication bypass; no withdrawal."}
+{"ghsa":"GHSA-3xf8-g8gr-g7rh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reauthentication reuses injected session ID; no withdrawal."}
+{"ghsa":"GHSA-4j6x-2764-m8gh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Team cache grants permissions never legitimately held."}
+{"ghsa":"GHSA-3rw9-wmc8-8948","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"OIDC token timeout is not authority withdrawal."}
+{"ghsa":"GHSA-6xc2-mj39-q599","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reset endpoint changes password without token; no residual authority."}
+{"ghsa":"GHSA-j5jh-hpr4-h332","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Remember-me session fixation; no authority withdrawal."}
+{"ghsa":"GHSA-99v3-9x35-c5vf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"SAML confirmation validation flaw enables spoofing; no withdrawal."}
+{"ghsa":"GHSA-j8j8-348v-wfm3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"SAML signature-validation bypass; no authority withdrawal."}
+{"ghsa":"GHSA-8cgx-9ccj-3gwr","relevant":"Y","carrier":"DATA","fresh_state_detects":"N","revocation_kind":"OTHER","webapp":"Y","note":"Google OAuth link persists when a user account becomes a bot."}
+{"ghsa":"GHSA-mwmh-7px9-4c23","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Password-reset header poisoning; no residual withdrawn authority."}
+{"ghsa":"GHSA-7mgx-gvjw-m3w3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Spoofed proxy address bypasses Admin UI authentication; no withdrawal."}
+{"ghsa":"GHSA-gp2m-7cfp-h6gf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Persistent identifier collision merges different users; no withdrawal."}
+{"ghsa":"GHSA-x394-g9j8-x7mf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Whitelist test permits file inclusion; no authority withdrawal."}
+{"ghsa":"GHSA-mp6x-97xj-9x62","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Authentication-flow token confusion enables account takeover; no withdrawal."}
+{"ghsa":"GHSA-7pq6-v88g-wf3w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cross-organization SAML impersonation; no withdrawn authority."}
+{"ghsa":"GHSA-jxgr-3v7q-3w9v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Programmatic login skips custom user checker; withdrawal unspecified."}
+{"ghsa":"GHSA-jw8f-q84g-r3vm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Private-message quoting bypasses forum password; no withdrawal."}
+{"ghsa":"GHSA-29wx-vh33-7x7r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"JWT error handling may accept invalid tokens; no withdrawal."}
+{"ghsa":"GHSA-644j-jcc4-crx7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin exposes environment credentials; no authority withdrawal."}
+{"ghsa":"GHSA-crrc-vpp2-f5x7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-5g7f-p7jg-v6mv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Command-line password exposure; no authority withdrawal."}
+{"ghsa":"GHSA-cqmr-rcpr-cxh3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"CLI password template expansion exposes credentials; no withdrawal."}
+{"ghsa":"GHSA-xpg8-3hhp-p7w8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Namespace confusion bypasses static authorization; no withdrawal."}
+{"ghsa":"GHSA-rfc8-wrrf-wp3w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Credentials stored unencrypted; no authority withdrawal."}
+{"ghsa":"GHSA-gfvg-qv54-r4pc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Workflow users read host files beyond static permissions."}
+{"ghsa":"GHSA-f9f8-rm49-7jv2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Active CI token leaks to logs; no withdrawal."}
+{"ghsa":"GHSA-563f-2439-rmq4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Bulk API omits configured secret redaction; no withdrawal."}
+{"ghsa":"GHSA-8q5r-mmjf-575q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malicious CI configuration executes code; no authority withdrawal."}
+{"ghsa":"GHSA-jm7p-cc5g-qwxx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Local code-sign verification spoofing; no withdrawal."}
+{"ghsa":"GHSA-46m5-8hpj-p5p5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Viewers access inadequately protected integration data; no withdrawal."}
+{"ghsa":"GHSA-ch52-px8q-f22j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Outbound request filtering bypass; no authority withdrawal."}
+{"ghsa":"GHSA-hx82-2ggv-vwm5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores password unencrypted; no withdrawal."}
+{"ghsa":"GHSA-r2pg-r6h7-crf3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Template function exfiltrates secrets; no authority withdrawal."}
+{"ghsa":"GHSA-4vr7-g93g-cf6m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-h6w8-27ph-c385","relevant":"Y","carrier":"UNCLEAR","fresh_state_detects":"N","revocation_kind":"LOGOUT_PWCHANGE","webapp":"Y","note":"Cached sensitive data remains viewable after logout."}
+{"ghsa":"GHSA-6v92-ph9p-hrpc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Remote null dereference; no authority withdrawal."}
+{"ghsa":"GHSA-qpp2-2mcp-2wm5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Guests list documents they never had permission to view."}
+{"ghsa":"GHSA-pwrf-q7h8-jjr7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Customers modify other customers' records; no withdrawal."}
+{"ghsa":"GHSA-rxrq-fv76-26pr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Attacker-triggered process exit; no authority withdrawal."}
+{"ghsa":"GHSA-pvg3-6q9j-mj3x","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Framework serializes sensitive model fields; no withdrawal."}
+{"ghsa":"GHSA-vg6p-v9vm-6fgj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Crawler SSRF bypass; no authority withdrawal."}
+{"ghsa":"GHSA-9gp8-6cg8-7h34","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"World-writable extracted schema file; no withdrawal."}
+{"ghsa":"GHSA-3xf9-pgc2-mr9c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin endpoints lack permission checks; no withdrawal."}
+{"ghsa":"GHSA-5pcv-7v3q-hw8j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores tokens unencrypted; no authority withdrawal."}
+{"ghsa":"GHSA-pc2q-jcxq-rjrr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Build script leaks environment secrets; no withdrawal."}
+{"ghsa":"GHSA-8x6c-375h-pm4f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Credentials stored unencrypted; no authority withdrawal."}
+{"ghsa":"GHSA-pw86-qvx9-34r7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cross-instance audit IDOR; no withdrawal event."}
+{"ghsa":"GHSA-v24v-f45g-w7jf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-c7xp-q6q8-hg76","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Unbounded image generation denial of service; no withdrawal."}
+{"ghsa":"GHSA-7ff8-qfwx-8gx5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Console masking misses escaped secrets; no withdrawal."}
+{"ghsa":"GHSA-2vp2-8m5j-4rjx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"World-writable local binary; no authority withdrawal."}
+{"ghsa":"GHSA-w828-4qhx-vxx3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Symlink race escapes SDK sandbox; no withdrawal."}
+{"ghsa":"GHSA-qhch-g8qr-p497","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Crafted volume exposes host files; no withdrawal event."}
+{"ghsa":"GHSA-mr8q-7f5j-wc79","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Maintenance response discloses installation path; no withdrawal."}
+{"ghsa":"GHSA-6h7f-qwqm-35pp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"PDF library reads local files; no authority withdrawal."}
+{"ghsa":"GHSA-4vrx-8phj-x3mg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-wc42-fcjp-v8vq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Physical attacker modifies unmeasured partition; no withdrawal."}
+{"ghsa":"GHSA-v98g-8rqx-g93g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Authorized push smuggles unreviewed commits; no withdrawal."}
+{"ghsa":"GHSA-7mp4-25j8-hp5q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Race bypasses coupon usage limits; no authority withdrawal."}
+{"ghsa":"GHSA-jc5m-wrp2-qq38","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Forgot-password endpoint exposes user PII; no withdrawal."}
+{"ghsa":"GHSA-7c4j-2m43-2mgh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malformed block crashes node; no authority withdrawal."}
+{"ghsa":"GHSA-rx7j-mw4c-76g9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Authentication gem permits SQL injection; no withdrawal."}
+{"ghsa":"GHSA-qh3m-c6hw-5hmv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores credentials unencrypted; no withdrawal."}
+{"ghsa":"GHSA-5m8f-v3gw-h94w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Support bundle fails to redact secrets; no withdrawal."}
+{"ghsa":"GHSA-h7r6-8qmm-hj5r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Database error logs sensitive data; no withdrawal event."}
+{"ghsa":"GHSA-8vp7-8q4w-vv7m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-vxrc-68xx-x48g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Sandbox permits forbidden object conversion; no withdrawal."}
+{"ghsa":"GHSA-7wv8-g97r-432h","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Information exposure advisory describes no withdrawal event."}
+{"ghsa":"GHSA-82j6-4fq7-fx62","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Support export contains plaintext credentials; no withdrawal."}
+{"ghsa":"GHSA-cfw5-v7cw-69cw","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Connection race leaks active credentials; no withdrawal."}
+{"ghsa":"GHSA-c253-8hr4-r8v9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"JSON response exposes team invite ID; no withdrawal."}
+{"ghsa":"GHSA-vpq9-c67q-23fq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"CDN cache leaks authenticated response; no withdrawal."}
+{"ghsa":"GHSA-744x-3838-5r56","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Organization team endpoint lacks authentication; no withdrawal."}
+{"ghsa":"GHSA-7833-fr7j-v32q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Untrusted repository includes local files; no withdrawal."}
+{"ghsa":"GHSA-wq8g-hm94-5rqq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Hostname mismatch exposes root context; no withdrawal."}
+{"ghsa":"GHSA-x3r2-fj3r-g5mv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Token payload exposes second-factor secret; no withdrawal."}
+{"ghsa":"GHSA-356j-hg45-x525","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Concurrent CSV exports mix users' data; no withdrawal."}
+{"ghsa":"GHSA-7x3h-rm86-3342","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Sandbox key coercion enables code execution; no withdrawal."}
+{"ghsa":"GHSA-6pqm-pp65-mc26","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores credentials in plaintext; no withdrawal."}
+{"ghsa":"GHSA-79qm-7rj5-m7r9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Proxy forwards internal response headers; no withdrawal."}
+{"ghsa":"GHSA-pjpr-2qqp-gprf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Browser engine memory disclosure; no authority withdrawal."}
+{"ghsa":"GHSA-ffr6-8cv5-j637","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Configuration form exposes active secret key; no withdrawal."}
+{"ghsa":"GHSA-wvvp-jwf5-qcpc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Page tree ignores static read permissions; no withdrawal."}
+{"ghsa":"GHSA-v49x-8hvm-q347","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Upload path traversal exposes configuration data; no withdrawal."}
+{"ghsa":"GHSA-rp6x-ggw6-8g56","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"User-controlled parameters bypass security checks; no withdrawal."}
+{"ghsa":"GHSA-hxp8-r9g3-grfr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"API permits username enumeration; no authority withdrawal."}
+{"ghsa":"GHSA-qphr-3mvq-v466","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Numeric audit-log ID bypasses static DAG scoping."}
+{"ghsa":"GHSA-7pf2-9c95-w332","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Boards API omits file ownership checks; no withdrawal."}
+{"ghsa":"GHSA-69fp-7c8p-crjr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Authorization parameters exposed in cookie; no withdrawal."}
+{"ghsa":"GHSA-wqmm-q65g-2hqr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Predictable randomness leaks cross-session information; no withdrawal."}
+{"ghsa":"GHSA-2rhg-hqq9-8xjh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Directory listing exposes data without authentication; no withdrawal."}
+{"ghsa":"GHSA-vxx3-6hc9-7cc3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Shell option parsing bypasses command allowlist; no withdrawal."}
+{"ghsa":"GHSA-hf4x-6h87-hm79","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Insufficient checks expose private issue summaries; no withdrawal."}
+{"ghsa":"GHSA-8p83-68cw-943f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Update notifier transmits system information; no withdrawal."}
+{"ghsa":"GHSA-8v2v-wjwg-vx6r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Static-file library exposes unexpected files; no withdrawal."}
+{"ghsa":"GHSA-8hwr-589g-xpj2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores API tokens unencrypted; no withdrawal."}
+{"ghsa":"GHSA-cpf4-pmr4-w6cx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cross-tenant organization API IDOR; no withdrawal event."}
+{"ghsa":"GHSA-qgmm-f2qw-r95f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Logged exception leaks submitted password; no withdrawal."}
+{"ghsa":"GHSA-3hfq-cx9j-923w","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Image digest validation can be manipulated; no withdrawal."}
+{"ghsa":"GHSA-q7cp-r6cj-hpf5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Query parameter bypasses static region permissions; no withdrawal."}
+{"ghsa":"GHSA-wmq3-24jm-m8xh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores credentials unencrypted; no withdrawal."}
+{"ghsa":"GHSA-jrhw-r343-pjwj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin exposes configured job passwords; no withdrawal."}
+{"ghsa":"GHSA-rq7w-g337-39qq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Development endpoint exposes local path and identifier; no withdrawal."}
+{"ghsa":"GHSA-5xm4-jmpw-p6j3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Local filename leaks repository credentials; no withdrawal."}
+{"ghsa":"GHSA-rr55-jp92-8wp2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"MCP tools allow arbitrary local file access; no withdrawal."}
+{"ghsa":"GHSA-phcg-h58r-gmcq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Physical attacker bypasses measured boot; no withdrawal."}
+{"ghsa":"GHSA-x4m5-j4x4-4wjg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Administrators access other users' API tokens; no withdrawal."}
+{"ghsa":"GHSA-vcgf-vmpc-ph79","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Non-admin reads other users' information; no withdrawal."}
+{"ghsa":"GHSA-hgv7-v322-mmgr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Concurrent request contexts leak cross-user data; no withdrawal."}
+{"ghsa":"GHSA-4jjw-pwvw-q6w3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-rw75-m7gp-92m3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Django admin query leaks sensitive fields; no withdrawal."}
+{"ghsa":"GHSA-2fqw-7c6r-2cq6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"JWT claim omission breaks tenant isolation; no withdrawal."}
+{"ghsa":"GHSA-2ch6-x3g4-7759","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Conversation identifier broadens command allowlist; no withdrawal."}
+{"ghsa":"GHSA-cxh2-4639-vmc5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Monitoring configuration exfiltrates service-account token; no withdrawal."}
+{"ghsa":"GHSA-3ghg-3787-w2xr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthenticated guest address IDOR; no withdrawal."}
+{"ghsa":"GHSA-mv7x-27pc-8c96","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Subscription handler authorization bypass; no withdrawal described."}
+{"ghsa":"GHSA-w4fj-ccr6-7pcp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Sensitive parameter values written to logs; no withdrawal."}
+{"ghsa":"GHSA-hg9m-67mm-7pg3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"GraphQL filters reveal hidden-field matches; no withdrawal."}
+{"ghsa":"GHSA-jp8r-jh5j-cgwf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores API key unencrypted; no withdrawal."}
+{"ghsa":"GHSA-f989-c77f-r2cq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthenticated API exfiltrates server credentials; no withdrawal."}
+{"ghsa":"GHSA-694g-j8pj-cjj5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Alert API omits static group authorization; no withdrawal."}
+{"ghsa":"GHSA-c2v7-j5gq-wcq4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Remember-token comparison leaks timing information; no withdrawal."}
+{"ghsa":"GHSA-jq29-r496-r955","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cross-collection preference IDOR; no withdrawal event."}
+{"ghsa":"GHSA-qr9h-vr5p-pwwx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Missing Host header crashes service; no withdrawal."}
+{"ghsa":"GHSA-vxmv-74rf-vqgp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Portfolio download URL bypasses file access checks; no withdrawal."}
+{"ghsa":"GHSA-rp7r-79rm-2758","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Database protocol exposes credentials in cleartext; no withdrawal."}
+{"ghsa":"GHSA-gwvq-rgqf-993f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Concurrent context confusion swaps authenticated identities; no withdrawal."}
+{"ghsa":"GHSA-gvmr-mp5q-9wvw","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores password unencrypted; no withdrawal."}
+{"ghsa":"GHSA-hhwc-8g49-j8jx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"World-writable gem files enable local escalation; no withdrawal."}
+{"ghsa":"GHSA-pgqf-926r-548m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cross-repository label existence oracle; no withdrawal."}
+{"ghsa":"GHSA-7563-75j9-6h5p","relevant":"Y","carrier":"UNCLEAR","fresh_state_detects":"N","revocation_kind":"LOGOUT_PWCHANGE","webapp":"Y","note":"Browser cache exposes previously viewed protected data after logout."}
+{"ghsa":"GHSA-wg33-x934-3ghh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Cryptographic padding weakness reveals plaintext; no withdrawal."}
+{"ghsa":"GHSA-63qx-x74g-jcr7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Path traversal exposes repository-server files; no withdrawal."}
+{"ghsa":"GHSA-h6fg-mjxg-hqq4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Tensor truncation causes memory corruption; no withdrawal."}
+{"ghsa":"GHSA-xg5v-696h-c3vr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Active session identifier leaks to audit logs; no withdrawal."}
+{"ghsa":"GHSA-jff3-mwp3-f8cw","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Anonymous visitors view setup logs and snapshots; no withdrawal."}
+{"ghsa":"GHSA-569v-q83c-3j3g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Mass assignment moves objects across tenants; no withdrawal."}
+{"ghsa":"GHSA-gh4x-f7cq-wwx6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthenticated configuration endpoint exposes secrets; no withdrawal."}
+{"ghsa":"GHSA-239g-2685-54x3","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Local symlink race overwrites files; no authority withdrawal."}
+{"ghsa":"GHSA-5f2f-hr23-j59j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Mail headers disclose information; no withdrawal."}
+{"ghsa":"GHSA-gwxm-wqpq-w539","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Configuration form exposes SMTP password; no withdrawal."}
+{"ghsa":"GHSA-hf7w-f4h4-9xp8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Configuration form transmits API key plaintext; no withdrawal."}
+{"ghsa":"GHSA-6g2q-w5j3-fwh4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Concurrent containers receive another container's environment; no withdrawal."}
+{"ghsa":"GHSA-fqrg-vmvj-jv3x","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Registration confirmation reveals full names; no withdrawal."}
+{"ghsa":"GHSA-gfq7-5x4g-3xhf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"DNS rebinding bypasses outbound-request filtering; no withdrawal."}
+{"ghsa":"GHSA-p75j-wc34-527c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Automation output leaks sensitive module values; no withdrawal."}
+{"ghsa":"GHSA-hph9-9vcq-f7gp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Workspace browser exposes agent files after builds; no authority withdrawal."}
+{"ghsa":"GHSA-rjww-2x8v-m9v9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Server serializer may expose sensitive application data; no withdrawal."}
+{"ghsa":"GHSA-jqfh-8hw5-fqjr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Library input crashes process; no authority withdrawal."}
+{"ghsa":"GHSA-p72g-cgh9-ghjg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Failed handshakes exhaust throttling counters; no withdrawal."}
+{"ghsa":"GHSA-9m5v-vq4f-mrvf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"XML entity processing reads files; no withdrawal event."}
+{"ghsa":"GHSA-767h-63j4-5226","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Private export bearer link is reusable but never revoked."}
+{"ghsa":"GHSA-449q-v4j2-5h8p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Weak agent shared-secret check enables initial impersonation."}
+{"ghsa":"GHSA-gcv8-gh4r-25x6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Scheme case bypasses URL restrictions; no withdrawal."}
+{"ghsa":"GHSA-f7ww-2725-qvw2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Symlink race bypasses command approval scope; no withdrawal."}
+{"ghsa":"GHSA-6967-9vvv-4cmm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Anonymous users enumerate hidden item names; no withdrawal."}
+{"ghsa":"GHSA-r3xq-68wh-gwvh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reusable single-use reset token is explicitly out of scope."}
+{"ghsa":"GHSA-5x9f-6vg5-qg4m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Reusable single-use SAML token is explicitly out of scope."}
+{"ghsa":"GHSA-6f6w-6j58-rq76","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-8xcj-9hfr-fh9j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Clone endpoint omits source-project permission check; no withdrawal."}
+{"ghsa":"GHSA-h36c-m3rf-34h9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Fake token retrieves archived workflows; no withdrawal."}
+{"ghsa":"GHSA-x234-r5fg-x52m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Typeahead API exposes filesystem paths; no withdrawal."}
+{"ghsa":"GHSA-w53m-gxvg-vx7p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"RSS feed exposes protected archive items; no withdrawal."}
+{"ghsa":"GHSA-22c5-cpvr-cfvq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-w853-jp5j-5j7f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Local symlink race truncates files; no withdrawal."}
+{"ghsa":"GHSA-8rj5-2857-877j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malformed input crashes decoding library; no withdrawal."}
+{"ghsa":"GHSA-9pwq-gcrx-wghh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Safe Rust exposes dangling references; no authority withdrawal."}
+{"ghsa":"GHSA-f7j3-774f-rfhj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Downloader forwards cookies across redirects; no withdrawal."}
+{"ghsa":"GHSA-35p6-xmwp-9g52","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"HTTP client misassociates queued responses; no withdrawal."}
+{"ghsa":"GHSA-54gp-qff8-946c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Import log IDOR; no authority withdrawal."}
+{"ghsa":"GHSA-6g55-p6wh-862q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Source-map comment reads local files; no withdrawal."}
+{"ghsa":"GHSA-58r7-4wr5-hfx8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Filter expression exposes server environment variables; no withdrawal."}
+{"ghsa":"GHSA-8mxv-9xhp-86h4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Redirect leaks bearer tokens and encryption keys; no withdrawal."}
+{"ghsa":"GHSA-vg4f-8v9q-5c3x","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"SAML signature validation permits impersonation; no withdrawal."}
+{"ghsa":"GHSA-q8ch-jx67-q52x","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Namespace parameter bypasses static authorization; no withdrawal."}
+{"ghsa":"GHSA-3q6p-r6rr-266x","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores passwords unencrypted; no withdrawal."}
+{"ghsa":"GHSA-5r5f-hcwf-r9jh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores access token plaintext; no withdrawal."}
+{"ghsa":"GHSA-c33v-23rx-7qqc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"RSS order IDOR; no authority withdrawal."}
+{"ghsa":"GHSA-rjvw-7vvw-549v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"DNS rebinding bypasses webhook SSRF filter; no withdrawal."}
+{"ghsa":"GHSA-rf39-3f98-xr7r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Installer binary hijack enables local escalation; no withdrawal."}
+{"ghsa":"GHSA-9m43-p3cx-w8j5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malicious registry exfiltrates active pull credentials; no withdrawal."}
+{"ghsa":"GHSA-5jpx-9hw9-2fx4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Email parser misdelivers authentication links; no withdrawal."}
+{"ghsa":"GHSA-5crp-9r3c-p9vr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Deep JSON nesting causes denial of service; no withdrawal."}
+{"ghsa":"GHSA-69m9-rprc-2x7g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Search de-anonymizes assignment submissions; no withdrawal."}
+{"ghsa":"GHSA-6cr3-cm5h-8q96","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Internal API exposes global configuration; no withdrawal."}
+{"ghsa":"GHSA-5hgf-628x-mcqf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"World-readable command output file; no withdrawal."}
+{"ghsa":"GHSA-7xmq-g46g-f8pv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Sandbox symlink race reads host files; no withdrawal."}
+{"ghsa":"GHSA-q4vm-pq3q-8wgq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Active session tokens stored plaintext; no revocation event."}
+{"ghsa":"GHSA-652x-xj99-gmcc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"HTTP client leaks proxy credentials on redirect; no withdrawal."}
+{"ghsa":"GHSA-wj2j-qwcf-cfcc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Physical attacker extracts disk encryption key; no withdrawal."}
+{"ghsa":"GHSA-prjm-2fj2-787f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Grade history exposes otherwise hidden user names; no withdrawal."}
+{"ghsa":"GHSA-x223-p2gf-v735","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Unauthenticated upload exhausts storage and leaks path; no withdrawal."}
+{"ghsa":"GHSA-xx2h-2hf5-v7vv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"UI exposes stored proxy password; no withdrawal."}
+{"ghsa":"GHSA-qxvw-fvwx-5cp7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Database driver sends password over insecure transport; no withdrawal."}
+{"ghsa":"GHSA-6q2v-vfwp-pvwh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-2fhr-f6q6-c4p2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"REST API permits arbitrary company membership; no withdrawal."}
+{"ghsa":"GHSA-h742-xx59-r9pq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"REST endpoint exposes user status information; no withdrawal."}
+{"ghsa":"GHSA-pr33-38xx-6r26","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"HTTP client leaks cookies across origins; no withdrawal."}
+{"ghsa":"GHSA-5fc3-pqf2-57cx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Authorizer writes sensitive information to logs; no withdrawal."}
+{"ghsa":"GHSA-mwr4-5g34-j5cq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Transcoder lets query overwrite authorized path identifier; no withdrawal."}
+{"ghsa":"GHSA-75v4-m273-5j49","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Login endpoints expose protected MFA data; no withdrawal."}
+{"ghsa":"GHSA-fx6j-9pp6-ph36","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Logged-in users see system and database metadata; no withdrawal."}
+{"ghsa":"GHSA-9wmc-988h-2mv2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"User ID confusion permits another user's privileges; no withdrawal."}
+{"ghsa":"GHSA-qf3c-rw9f-jh7v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Job results expose onboarding credentials; no withdrawal."}
+{"ghsa":"GHSA-5xvq-cp9x-6p6r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malformed SSH key-exchange input crashes server; no withdrawal."}
+{"ghsa":"GHSA-gwm6-q8ch-hcfr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Directory symlink race redirects privileged write; no withdrawal."}
+{"ghsa":"GHSA-823f-cwm9-4g74","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Crawler sends credentials to unintended targets; no withdrawal."}
+{"ghsa":"GHSA-95fr-cm4m-q5p9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Anonymous requests reveal private object metadata; no withdrawal."}
+{"ghsa":"GHSA-269x-pg5c-5xgm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Run-task feature bypasses static DAG restrictions; no withdrawal."}
+{"ghsa":"GHSA-gw95-48xq-gqf9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Course reports expose users outside teacher groups; no withdrawal."}
+{"ghsa":"GHSA-37mj-c2wf-cx96","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Active session endpoint exposes MFA secrets; no withdrawal."}
+{"ghsa":"GHSA-vcvp-89fq-hwj8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Login redirect trick exposes credentials; no withdrawal."}
+{"ghsa":"GHSA-68c2-4mpx-qh95","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"SDK bundles configured auth token; no withdrawal."}
+{"ghsa":"GHSA-qhqv-q4xg-f6g7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"AJP connection reuse leaks request data; no withdrawal."}
+{"ghsa":"GHSA-2p7v-jm8m-g3qq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Referer leaks active token enabling CSRF; no withdrawal."}
+{"ghsa":"GHSA-j7xv-fc46-hgpg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin stores and displays API key unencrypted; no withdrawal."}
+{"ghsa":"GHSA-6x4h-9622-fqr6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"HTTP parsing allows request injection; no withdrawal."}
+{"ghsa":"GHSA-p6xx-fhfw-7mj7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Backend module permits configuration injection; no withdrawal."}
+{"ghsa":"GHSA-h6j3-j35f-v2x7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malformed login packet crashes game server; no withdrawal."}
+{"ghsa":"GHSA-xm8r-5wh6-f46f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Authentication timing side channel; no authority withdrawal."}
+{"ghsa":"GHSA-v62p-cjv8-35xh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Remote file integrity failure; no authority withdrawal."}
+{"ghsa":"GHSA-5hq8-qhww-jm7q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Certificate expiry race crashes listener; no withdrawal."}
+{"ghsa":"GHSA-2g99-c67p-56hm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"XML security policy validation omitted; no withdrawal."}
+{"ghsa":"GHSA-4qpj-gxxg-jqg4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Mail header injection enables shell execution; no withdrawal."}
+{"ghsa":"GHSA-2pwf-xwr3-hp55","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-p5j7-26wj-423j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Forum logic reveals author username; no withdrawal."}
+{"ghsa":"GHSA-wf98-vxv9-jqfv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Malformed feed triggers dashboard XSS; no withdrawal."}
+{"ghsa":"GHSA-fwj4-72fm-c93g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Shell resolution may run malicious executable; no withdrawal."}
+{"ghsa":"GHSA-jjmg-x456-w976","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Incorrect cookie prefix weakens origin assurance; no withdrawal."}
+{"ghsa":"GHSA-ff5x-w9wg-h275","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Credential ownership proof validation missing; no withdrawal."}
+{"ghsa":"GHSA-292x-hjr8-226f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Consent manipulation grants scopes never legitimately held."}
+{"ghsa":"GHSA-2q97-m5rc-p3gp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Virtual-machine resource metering flaw; no withdrawal."}
+{"ghsa":"GHSA-9wrw-p9rm-r782","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Forged SAML logout request is unauthorized revocation."}
+{"ghsa":"GHSA-v744-h36c-hv5j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Administrator functions lack proper initial access control."}
+{"ghsa":"GHSA-9cw3-j7wg-jwj8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cached queries leak another tenant's entities; no withdrawal."}
+{"ghsa":"GHSA-qrqq-9c63-xfrg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Static-file service permits directory traversal; no withdrawal."}
+{"ghsa":"GHSA-c5gj-w4hx-gvmx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cart IDOR deletes another user's items; no withdrawal."}
+{"ghsa":"GHSA-q874-g24w-4q9g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Authenticated user can leak server access token; no withdrawal."}
+{"ghsa":"GHSA-v94h-hvhg-mf9h","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Crafted requests cause framework denial of service; no withdrawal."}
+{"ghsa":"GHSA-mf74-qq7w-6j7v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Markdown image downloader permits SSRF; no withdrawal."}
+{"ghsa":"GHSA-fv8m-p45w-gf38","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Browser engine mitigation bypass; no authority withdrawal."}
+{"ghsa":"GHSA-8655-xgh5-5vvq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Unchecked empty input causes memory fault; no withdrawal."}
+{"ghsa":"GHSA-7pwq-f4pq-78gm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malicious typosquatted package; no authority withdrawal."}
+{"ghsa":"GHSA-c873-wfhp-wx5m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Proof verifier soundness flaws; no authority withdrawal."}
+{"ghsa":"GHSA-vrp3-wc28-qg2h","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Security mitigation bypass enables code execution; no withdrawal."}
+{"ghsa":"GHSA-6hg4-vp5q-47mw","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Unconventional routes expose prefixed actions; no withdrawal."}
+{"ghsa":"GHSA-5w9c-rv96-fr7g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Package deliberately removed functionality; no withdrawal."}
+{"ghsa":"GHSA-qjcv-rx3v-7mvj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Blockchain protocol vulnerability; no authority withdrawal described."}
+{"ghsa":"GHSA-5633-f33j-c6f7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Runtime file tampering flaw; no withdrawal."}
+{"ghsa":"GHSA-mg4v-rf8p-ghqq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Servlet security annotations ignored; no withdrawal event."}
+{"ghsa":"GHSA-6fgm-x6ff-w78f","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Blockchain transfer denial of service; no authority withdrawal."}
+{"ghsa":"GHSA-pqqj-299w-wf53","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Stored cross-site scripting; no withdrawal."}
+{"ghsa":"GHSA-674v-3g2w-84gx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Template sandbox escape; no authority withdrawal."}
+{"ghsa":"GHSA-9pcf-h8q9-63f6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"JavaScript sandbox escape; no authority withdrawal."}
+{"ghsa":"GHSA-9f2c-xxfm-32mj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-v7vf-f5q6-m899","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Runtime decoder enables remote code execution; no withdrawal."}
+{"ghsa":"GHSA-7j52-6fjp-58gr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Smart-contract storage layout inconsistency; no withdrawal."}
+{"ghsa":"GHSA-ppg2-ww3w-hq84","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Connection pool user confusion; no withdrawal event."}
+{"ghsa":"GHSA-fwvp-x5gj-773j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malicious package steals browser form data; no withdrawal."}
+{"ghsa":"GHSA-392h-r46j-q24p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Application parameter enables remote code execution; no withdrawal."}
+{"ghsa":"GHSA-rm8v-mxj3-5rmq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Cryptographic padding oracle; no authority withdrawal."}
+{"ghsa":"GHSA-rhq6-9rgh-v45c","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Symlink chmod escapes container filesystem; no withdrawal."}
+{"ghsa":"GHSA-77xj-rrh3-wx3v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malicious crate exfiltrates environment files; no withdrawal."}
+{"ghsa":"GHSA-f3wp-xpv2-6vmg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Password change reuses hashing salt but invalidates password."}
+{"ghsa":"GHSA-3vx7-xff6-h2vx","relevant":"Y","carrier":"ASYNC","fresh_state_detects":"N","revocation_kind":"OTHER","webapp":"Y","note":"Migration work continues after the associated instance is deleted."}
+{"ghsa":"GHSA-7h74-7vcw-4mwp","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Unsigned serialized request permits object injection; no withdrawal."}
+{"ghsa":"GHSA-mg66-3x8x-r8g2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Backend frames accept attacker websites; no withdrawal."}
+{"ghsa":"GHSA-rc7p-gmvh-xfx2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Internet-exposed UI permits cluster code execution; no withdrawal."}
+{"ghsa":"GHSA-q37h-jhf3-85cj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"CMS users bypass static safe-mode restriction; no withdrawal."}
+{"ghsa":"GHSA-fvxv-9xxr-h7wj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Local process permits user impersonation; no withdrawal."}
+{"ghsa":"GHSA-7phw-cxx7-q9vq","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Route-pattern mismatch bypasses access control; no withdrawal."}
+{"ghsa":"GHSA-6vjg-2q57-rgfw","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"IP lookup causes resource exhaustion; no withdrawal."}
+{"ghsa":"GHSA-c439-chv8-8g2j","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Rust layout assumption causes undefined behavior; no withdrawal."}
+{"ghsa":"GHSA-g4xv-r3qw-v3q2","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Internal workspace content lacks authentication; no withdrawal."}
+{"ghsa":"GHSA-3mv5-343c-w2qg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Safe Rust methods permit undefined behavior; no withdrawal."}
+{"ghsa":"GHSA-vh7q-j8p5-2h4h","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Password field reflects user's own submission; no withdrawal."}
+{"ghsa":"GHSA-2f6r-892p-69g5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Theme upload permits arbitrary PHP execution; no withdrawal."}
+{"ghsa":"GHSA-28r2-q6m8-9hpx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malicious downloads exhaust resources; no withdrawal."}
+{"ghsa":"GHSA-jp57-9j37-5476","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Mass assignment grants roles never legitimately held."}
+{"ghsa":"GHSA-r5m2-g5gc-q43r","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"CLI handshake denial of service; no withdrawal."}
+{"ghsa":"GHSA-7x48-7466-3g33","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Local D-Bus methods enable command execution; no withdrawal."}
+{"ghsa":"GHSA-qhjc-hg94-245v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Front-controller URL bypasses cache protections; no withdrawal."}
+{"ghsa":"GHSA-7f6p-phw2-8253","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Cryptographic protocol flaws leak secret shares; no withdrawal."}
+{"ghsa":"GHSA-qqgj-22gr-73vx","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"WebDAV requests lack security declarations; no withdrawal."}
+{"ghsa":"GHSA-2cg3-w597-rjfv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Export user deletes arbitrary files; no withdrawal."}
+{"ghsa":"GHSA-8h2g-r292-j8xh","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Configured deny policy incorrectly allows traffic; no withdrawal event."}
+{"ghsa":"GHSA-w4hv-vmv9-hgcr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Reflected XSS enables user impersonation; no withdrawal."}
+{"ghsa":"GHSA-wqcr-xm43-hpqr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Image decoder memory corruption; no withdrawal."}
+{"ghsa":"GHSA-9r25-4j77-9wc7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Content endpoint lacks correct access control; no withdrawal."}
+{"ghsa":"GHSA-28r6-jm5h-mrgg","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Framework route lookup bypasses access control; no withdrawal."}
+{"ghsa":"GHSA-7m2v-x7rg-5hm5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Login timing reveals valid users; no withdrawal."}
+{"ghsa":"GHSA-7r5f-7qr4-pf6q","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"JavaScript sandbox escape; no authority withdrawal."}
+{"ghsa":"GHSA-jp99-5h8w-gmxc","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Virtual-machine sandbox escape; no authority withdrawal."}
+{"ghsa":"GHSA-8v97-gv3g-32rf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Cross-zone token impersonation grants new privileges; no withdrawal."}
+{"ghsa":"GHSA-5f2m-466j-3848","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malformed web requests cause denial of service; no withdrawal."}
+{"ghsa":"GHSA-jgpm-2862-q5m8","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Pipeline sandbox bypass enables code execution; no withdrawal."}
+{"ghsa":"GHSA-798p-53r7-mgw9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Plugin permits credential identifier enumeration; no withdrawal."}
+{"ghsa":"GHSA-h6wq-jw7q-grxv","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Elliptic-curve key disclosure; no authority withdrawal."}
+{"ghsa":"GHSA-c4rj-wrmq-52rj","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Special page reveals hidden-user existence; no withdrawal."}
+{"ghsa":"GHSA-pv2g-vm98-vjxf","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Build logs fail to mask credentials; no withdrawal."}
+{"ghsa":"GHSA-5j4m-89xf-mf5p","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"withdrawn/duplicate"}
+{"ghsa":"GHSA-m5pf-5894-jmx7","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Malicious browser package steals form data; no withdrawal."}
+{"ghsa":"GHSA-vv6c-69r6-chg9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Sandbox library omits requested network restrictions; no withdrawal."}
+{"ghsa":"GHSA-475v-pq2g-fp9g","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Crafted protocol streams exhaust resources; no withdrawal."}
+{"ghsa":"GHSA-c79c-gwph-gqfm","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Rust layout assumption risks invalid memory access; no withdrawal."}
+{"ghsa":"GHSA-cj6r-8pxj-5jv6","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Workspace browser exposes temporary credential files; no withdrawal."}
+{"ghsa":"GHSA-5644-2v3h-5w4x","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Compressed images exhaust host storage; no withdrawal."}
+{"ghsa":"GHSA-p3hj-cfhm-7g6v","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Delete permission crosses subwiki boundaries; no withdrawal."}
+{"ghsa":"GHSA-5pm8-492c-92p5","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Chart options cause prototype pollution; no withdrawal."}
+{"ghsa":"GHSA-h3qp-7fh3-f8h4","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Scanner misses malicious pickle execution; no withdrawal."}
+{"ghsa":"GHSA-fqx3-r75h-vc89","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Invalid item IDs crash game server; no withdrawal."}
+{"ghsa":"GHSA-x38m-486c-2wr9","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Logout creates empty sessions causing resource exhaustion."}
+{"ghsa":"GHSA-v45m-2wcp-gg98","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Global package install overwrites binaries; no withdrawal."}
+{"ghsa":"GHSA-43cm-73px-5v4m","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"Instance API bypasses private-flavor restriction; no withdrawal."}
+{"ghsa":"GHSA-x9qq-236j-gj97","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"N","note":"Restricted project configuration permits root escalation; no withdrawal."}
+{"ghsa":"GHSA-qffc-gwpp-m2xr","relevant":"N","carrier":null,"fresh_state_detects":null,"revocation_kind":null,"webapp":"Y","note":"XML entity processing reads files; no withdrawal."}

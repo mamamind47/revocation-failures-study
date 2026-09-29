@@ -1,0 +1,1 @@
+[{"a":14,"d":2,"f":"models/repo/user_repo.go"},{"a":1,"d":0,"f":"routers/api/v1/user/star.go"},{"a":1,"d":0,"f":"routers/api/v1/user/watch.go"},{"a":49,"d":0,"f":"tests/integration/api_user_star_test.go"}]

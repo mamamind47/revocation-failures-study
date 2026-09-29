@@ -1,0 +1,6 @@
+Human (Han) blind re-code vs adjudicated labels BEFORE any human-driven change (frozen: data/coding_final_pre_human.json)
+relevant n=100 agreement 0.980 kappa 0.960
+carrier n=48 agreement 0.875 kappa 0.847
+fresh_state_detects n=48 agreement 0.896 kappa 0.764
+revocation_kind n=48 agreement 0.958 kappa 0.947
+webapp n=48 agreement 0.958 kappa 0.850

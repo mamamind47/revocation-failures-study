@@ -1,0 +1,101 @@
+item,relevant,carrier,fresh_state_detects,revocation_kind,webapp,note
+R001,Y,SESSION,N,LOGOUT_PWCHANGE,Y,
+R002,Y,SESSION,N,ACCOUNT,Y,
+R003,N,,,,,
+R004,N,,,,,
+R005,N,,,,,
+R006,N,,,,,
+R007,N,,,,,
+R008,N,,,,,
+R009,Y,UNCLEAR,DEPENDS,MEMBERSHIP,Y,ระบุว่าถอดสมาชิกแล้วแต่ไม่บอกกลไกสิทธิ์ค้าง จึงไม่ชัดว่าการเริ่มสถานะใหม่จะพบหรือไม่
+R010,N,,,,,
+R011,Y,CHECK,N,ACCOUNT,Y,การแข่งขันใน API หลังปิดบัญชีต้องอาศัย session เดิม; ไม่ใช่การเข้าสู่ระบบใหม่
+R012,Y,TOKEN,N,LOGOUT_PWCHANGE,Y,
+R013,N,,,,,
+R014,N,,,,,
+R015,N,,,,,
+R016,Y,DATA,N,MEMBERSHIP,Y,
+R017,Y,SESSION,N,LOGOUT_PWCHANGE,N,
+R018,N,,,,,
+R019,Y,CHECK,Y,ACCOUNT,Y,
+R020,Y,CHECK,Y,PERMISSION,Y,role ของ IdP ถูกถอน แต่ endpoint token exchange ไม่ประเมิน role ใหม่
+R021,N,,,,,
+R022,N,,,,,
+R023,Y,SESSION,N,ACCOUNT,Y,
+R024,N,,,,,
+R025,N,,,,,
+R026,N,,,,,
+R027,N,,,,,
+R028,Y,TOKEN,N,LOGOUT_PWCHANGE,N,
+R029,Y,DATA,Y,PERMISSION,Y,composite role relationship ค้างอยู่แม้ถอนสิทธิ์เดิมและรีบูต
+R030,N,,,,,
+R031,N,,,,,
+R032,Y,DATA,N,MEMBERSHIP,Y,
+R033,Y,TOKEN,N,CREDENTIAL,N,คำขอเพิกถอนตอบ 200 ทั้งที่ storage error และ token ยังใช้ได้; ขึ้นกับการกระตุ้น error
+R034,Y,TOKEN,N,ACCOUNT,Y,
+R035,N,,,,,
+R036,Y,SESSION,N,LOGOUT_PWCHANGE,Y,
+R037,Y,TOKEN,N,CREDENTIAL,Y,
+R038,N,,,,,
+R039,Y,CACHE,DEPENDS,PERMISSION,N,cache ของ key provider ไม่ตรวจสิทธิ์ซ้ำหลังสิทธิ์ใช้ key ถูกถอน
+R040,N,,,,,
+R041,N,,,,,
+R042,N,,,,,
+R043,N,,,,,
+R044,N,,,,,
+R045,N,,,,,
+R046,N,,,,,
+R047,Y,CONNECTION,N,ACCOUNT,Y,
+R048,Y,UNCLEAR,DEPENDS,PERMISSION,Y,ระบุเพียงช่วงสั้นหลังถอนสิทธิ์ ไม่ระบุแหล่งสถานะค้าง
+R049,Y,SESSION,N,LOGOUT_PWCHANGE,Y,
+R050,Y,SESSION,N,LOGOUT_PWCHANGE,N,
+R051,Y,CACHE,DEPENDS,CREDENTIAL,Y,secret เดิมยังอยู่ใน runtime ช่วงหลัง reload; ระบุ cache ตามสถานะค้าง
+R052,Y,TOKEN,N,LOGOUT_PWCHANGE,Y,
+R053,N,,,,,
+R054,Y,SESSION,N,CREDENTIAL,Y,API key ที่ลบแล้วได้สร้าง session ค้างไว้ก่อนลบ
+R055,Y,SESSION,N,LOGOUT_PWCHANGE,Y,
+R056,N,,,,,
+R057,N,,,,,
+R058,N,,,,,
+R059,Y,DATA,N,PERMISSION,Y,หน้า revision ของ bugnote เดิมยังเผย metadata หลังเสียสิทธิ์ issue
+R060,N,,,,,
+R061,N,,,,,
+R062,Y,CHECK,Y,ACCOUNT,Y,
+R063,N,,,,,
+R064,Y,CHECK,Y,CREDENTIAL,Y,introspection ไม่ตรวจ token ที่ถูก revoke และ revoke endpoint ไม่เพิกถอนจริง
+R065,Y,TOKEN,N,LOGOUT_PWCHANGE,Y,
+R066,N,,,,,
+R067,N,,,,,
+R068,Y,CACHE,DEPENDS,CREDENTIAL,Y,ต้องเตรียม context hint และรู้ path ขณะ share ยังใช้ได้; cache ระดับ hint
+R069,N,,,,,
+R070,Y,CONNECTION,N,LOGOUT_PWCHANGE,Y,LIVE subscription ที่เปิดไว้ยังส่งข้อมูลตาม principal เดิมหลัง session ถูก invalidate
+R071,Y,CHECK,Y,ACCOUNT,Y,
+R072,N,,,,,
+R073,N,,,,,
+R074,N,,,,,
+R075,Y,SESSION,N,LOGOUT_PWCHANGE,Y,
+R076,Y,UNCLEAR,DEPENDS,PERMISSION,Y,ยังเข้าถึงได้แม้ token เก่าหมดอายุ แต่ไม่บอกว่าค้างในข้อมูลหรือจุดตรวจ
+R077,Y,TOKEN,N,ACCOUNT,Y,
+R078,Y,DATA,Y,MEMBERSHIP,Y,
+R079,N,,,,,
+R080,Y,CONNECTION,N,CREDENTIAL,Y,
+R081,N,,,,,
+R082,N,,,,,
+R083,Y,TOKEN,N,OTHER,Y,ปิด auth provider หรือเอาออกจาก authorized list แล้ว Rancher token เดิมยังใช้ได้
+R084,N,,,,,
+R085,Y,DATA,N,MEMBERSHIP,Y,
+R086,Y,SESSION,N,LOGOUT_PWCHANGE,N,
+R087,Y,CHECK,Y,ACCOUNT,N,SCIM active:false ตอบสำเร็จแต่บัญชียังคง active; เป็นหนึ่งในหลายช่องโหว่ของ advisory
+R088,N,,,,,
+R089,N,,,,,
+R090,Y,DATA,N,MEMBERSHIP,Y,webhook ที่สร้างก่อนถอนสมาชิกยังส่ง payload หลังถอน
+R091,N,,,,,
+R092,Y,ASYNC,N,ACCOUNT,Y,automation ที่สร้างไว้ก่อนเปลี่ยนเป็น pending ยังรันตามกำหนด
+R093,Y,TOKEN,N,ACCOUNT,Y,
+R094,N,,,,,
+R095,N,,,,,
+R096,N,,,,,
+R097,Y,SESSION,N,LOGOUT_PWCHANGE,Y,
+R098,N,,,,,
+R099,Y,TOKEN,N,CREDENTIAL,Y,กรณี delete token record แล้วยังใช้ JWT เดิมได้; advisory ยังกล่าวถึง logout ที่ panic
+R100,Y,TOKEN,N,ACCOUNT,Y,

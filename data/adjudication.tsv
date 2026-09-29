@@ -1,0 +1,50 @@
+idx	decision	final	reason
+112	claude	N	Single-use token not consumed; no authority withdrawal.
+240	claude	Y DATA N PERMISSION Y	Leaking private data after revocation is exercising withdrawn read authority (codebook v1.1 R1).
+252	claude	Y SESSION N LOGOUT_PWCHANGE Y	Text says sessions; SESSION/TOKEN immaterial to fresh-state.
+478	claude	Y DATA N MEMBERSHIP Y	R1.
+432	claude	N	Crypto-library key/cert revocation checking is out of scope (like CRL/OCSP).
+500	claude	Y CHECK Y ACCOUNT Y	Pending accounts can obtain a fresh JWT; missing role check on one path.
+342	claude	Y TOKEN N LOGOUT_PWCHANGE Y	Stateless signed cookie.
+277	codex	N	Context reuse across users, not a subject's withdrawn authority.
+467	claude	Y ASYNC N MEMBERSHIP Y	Webhook created before revocation (R2).
+239	claude	Y DATA N OTHER Y	Watch record created before visibility change (R2).
+114	claude	N	Escalation by moving namespace, not withdrawal.
+352	claude	Y DATA N MEMBERSHIP Y	R1, R2.
+337	codex	Y CHECK Y CREDENTIAL Y	Introspection validates nothing; a fresh revoked token passes.
+459	claude	Y DATA N PERMISSION Y	Historical timesheet must predate revocation (R2).
+385	codex	N	Durable membership obtained by abuse, never legitimate.
+460	codex	N	Protocol certificate blocklist, out of scope like CRL.
+424	claude	Y SESSION N ACCOUNT Y	Text says session tokens; immaterial.
+365	claude	Y DATA N PERMISSION Y	R1, R2.
+307	claude	Y CACHE DEPENDS OTHER Y	Repo-scoped access withdrawn by delete, cache resurrects it.
+195	codex	Y SESSION N LOGOUT_PWCHANGE N	Server-stored session token.
+184	codex	Y CHECK Y ACCOUNT N	Banned player still interacts via partial connection.
+110	codex	N	Browser history rendering; no server authority exercised.
+357	codex	Y CHECK Y PERMISSION Y	RAG path never re-checks file access; fresh request after revocation works.
+475	claude	Y DATA N MEMBERSHIP Y	R1, R2.
+207	codex	Y TOKEN N OTHER Y	Session token survives workspace ownership transfer.
+238	claude	Y DATA N PERMISSION Y	R1, R2.
+348	claude	Y CACHE DEPENDS CREDENTIAL N	Old secret held in process config until restart.
+44	codex	Y CHECK Y PERMISSION Y	Access persists even after old token expires, so new tokens carry old roles.
+395	claude	Y DATA N PERMISSION Y	Composite role created before revocation (R2).
+473	claude	Y DATA N OTHER Y	R1, R2.
+166	claude	Y DATA Y ACCOUNT Y	Residual memberships in data model.
+468	claude	Y DATA N MEMBERSHIP Y	R1, R2.
+133	claude	N	Cryptographic credential scheme, out of scope.
+88	claude	N	IdP allowlist bypass, no withdrawal.
+254	claude	N	Single-use token not consumed.
+472	codex	Y TOKEN N CREDENTIAL Y	Compromise detection should revoke attacker token but does not.
+482	codex	Y CHECK Y ACCOUNT N	SCIM deprovisioning leaves users active.
+379	claude	Y DATA N PERMISSION Y	Text says revoked posting privileges; needs a pre-revocation post (R2).
+310	codex	Y TOKEN N PERMISSION Y	Share link is a credential issued before revocation.
+256	claude	Y SESSION N MEMBERSHIP Y	Text: not reflected while logged in; group removal.
+517	claude	Y CACHE N CREDENTIAL Y	Context hint obtained before revocation.
+292	claude	N	Race on MFA token; revocation of known sessions works.
+332	claude	N	Text does not state that access survives a password reset.
+367	claude	Y TOKEN N LOGOUT_PWCHANGE Y	Stateless signed cookie-session.
+441	neither	Y TOKEN N OTHER N	Stale namespace token predates the drop (text: stale namespace-Editor token).
+474	claude	Y DATA N OTHER Y	Fork linkage created before visibility change (R2).
+532	codex	Y CHECK Y PERMISSION Y	Fresh token exchange ignores removed IdP roles.
+304	codex	N	No explicit withdrawal in text.
+327	claude	Y CACHE DEPENDS CREDENTIAL N	Old secret held in process config until restart.

@@ -1,0 +1,128 @@
+[
+ {
+  "ghsa": "GHSA-j8xr-c56q-m8jj",
+  "package": "github.com/go-gitea/gitea",
+  "summary": "Gitea improperly exposes issue titles and repository names through previously started stopwatches",
+  "patch_refs": [
+   "https://github.com/go-gitea/gitea/pull/36340",
+   "https://github.com/go-gitea/gitea/pull/36368",
+   "https://github.com/go-gitea/gitea/commit/95ea2df00a70176c516b12f3cfee8c84a310280f"
+  ]
+ },
+ {
+  "ghsa": "GHSA-8fwc-qjw5-rvgp",
+  "package": "code.gitea.io/gitea",
+  "summary": "Gitea may send release notification emails for private repositories to users whose access has been revoked",
+  "patch_refs": [
+   "https://github.com/go-gitea/gitea/pull/36319"
+  ]
+ },
+ {
+  "ghsa": "GHSA-2vgv-hgv4-22mh",
+  "package": "github.com/go-gitea/gitea",
+  "summary": "Gitea improperly exposes issue and pull request titles",
+  "patch_refs": [
+   "https://github.com/go-gitea/gitea/pull/36339",
+   "https://github.com/go-gitea/gitea/commit/67e75f30a83d2523cedc37ad7b03bcba66947833"
+  ]
+ },
+ {
+  "ghsa": "GHSA-95q8-x6r6-672m",
+  "package": "lemmy_api",
+  "summary": "Lemmy may expose private community data through community, saved, liked, and modlog API views",
+  "patch_refs": [
+   "https://github.com/LemmyNet/lemmy/commit/637151121a8e27b2b8c95e98d6f86966b31b4a6d"
+  ]
+ },
+ {
+  "ghsa": "GHSA-crmx-4p49-46m2",
+  "package": "mantisbt/mantisbt",
+  "summary": "MantisBT: Bugnote Revision Page Leaks Private Issue Metadata After Issue Access Is Revoked",
+  "patch_refs": [
+   "https://github.com/mantisbt/mantisbt/commit/71df1f67e05b2050cd4bd87839e6cc13747cf03f"
+  ]
+ },
+ {
+  "ghsa": "GHSA-v549-xx3c-6pc8",
+  "package": "github.com/mattermost/mattermost-server,github.com/mattermost/mattermost/server/v8",
+  "summary": "Mattermost doesn't check the create_post channel permission during post edit operations",
+  "patch_refs": [
+   "https://github.com/mattermost/mattermost/commit/090408f09f53ffc9afc6c65c7c7c1fd3a8cd22f3"
+  ]
+ },
+ {
+  "ghsa": "GHSA-pq65-77rc-7r8c",
+  "package": "org.keycloak:keycloak-server",
+  "summary": "Keycloak has a Time-of-check Time-of-use (TOCTOU) Race Condition",
+  "patch_refs": [
+   "https://github.com/keycloak/keycloak/pull/49624",
+   "https://github.com/keycloak/keycloak/commit/39cb8de54c8517efeda4baa8bc314fd40e9c6934"
+  ]
+ },
+ {
+  "ghsa": "GHSA-c6w6-57jj-62vh",
+  "package": "kimai/kimai",
+  "summary": "Improper Authorization in Kimai Timesheet Restart and Duplicate Allows New Timesheets After Project Access Revocation",
+  "patch_refs": []
+ },
+ {
+  "ghsa": "GHSA-66m4-5jjr-2rg5",
+  "package": "gitea.dev",
+  "summary": "Gitea: Webhooks created by a collaborator keep firing after their repo access is revoked \u2192 ongoing real-time exfiltration of private repo content",
+  "patch_refs": [
+   "https://github.com/go-gitea/gitea/pull/38406",
+   "https://github.com/go-gitea/gitea/pull/38426",
+   "https://github.com/go-gitea/gitea/commit/de4b8277e9cb576f2315fb03b5ab6478b42a1d31",
+   "https://github.com/go-gitea/gitea/commit/f69e15afe7496cc62e96dab244629c69eb31a7bf"
+  ]
+ },
+ {
+  "ghsa": "GHSA-qf2f-qh6p-7v89",
+  "package": "code.gitea.io/gitea",
+  "summary": "Gitea CVE-2026-20800 sibling endpoints not covered: revoked user still reads private repo objects via `/api/v1/user/starred` and private issue titles via `/api/v1/user/times`",
+  "patch_refs": []
+ },
+ {
+  "ghsa": "GHSA-q423-49rw-g9mh",
+  "package": "code.gitea.io/gitea",
+  "summary": "Gitea: GHSA-8fwc-qjw5-rvgp ClearRepoWatches fix not applied to API EditRepo path \u2014 sister code path retains stale watches on public->private",
+  "patch_refs": []
+ },
+ {
+  "ghsa": "GHSA-wrf9-r3h7-7x5v",
+  "package": "code.gitea.io/gitea",
+  "summary": "Gitea: Fork Synchronization Continues After Parent Repository Changes from Public to Private",
+  "patch_refs": [
+   "https://github.com/go-gitea/gitea/pull/38151"
+  ]
+ },
+ {
+  "ghsa": "GHSA-j2w3-9c3r-g83q",
+  "package": "code.gitea.io/gitea",
+  "summary": "Gitea: Private Repository Metadata Remains Accessible After Access Revocation",
+  "patch_refs": [
+   "https://github.com/go-gitea/gitea/pull/38321",
+   "https://github.com/go-gitea/gitea/pull/38390",
+   "https://github.com/go-gitea/gitea/commit/362539b78e50dfcc4bd1b9368fdd2a1b8cab0129",
+   "https://github.com/go-gitea/gitea/commit/500a09e044156d7a8d6eb58d67a28b8a1512c887"
+  ]
+ },
+ {
+  "ghsa": "GHSA-44qc-pgvp-wx7v",
+  "package": "code.gitea.io/gitea",
+  "summary": "Gitea: Notification API leaks private issue metadata after access revocation",
+  "patch_refs": [
+   "https://github.com/go-gitea/gitea/pull/38108",
+   "https://github.com/go-gitea/gitea/commit/9e84deb969aff5c1115c2984e41250f28c78451f"
+  ]
+ },
+ {
+  "ghsa": "GHSA-mvx4-532p-xfm9",
+  "package": "open-webui",
+  "summary": "Open WebUI: Scheduled automations continue after pending-user deactivation and stored model ACL revocation",
+  "patch_refs": [
+   "https://github.com/open-webui/open-webui/pull/26047",
+   "https://github.com/open-webui/open-webui/commit/920b655f4689e2118de928fbc936f6ebd4fed396"
+  ]
+ }
+]

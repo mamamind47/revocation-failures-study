@@ -1,0 +1,1 @@
+{"merged":true,"msg":"Fix bug on notification read\nWhen a user has been revoked permission to access a repository, the related notification could still be visited. But the repository's information should not be leaked any more."}

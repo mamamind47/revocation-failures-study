@@ -1,0 +1,8 @@
+adb/
+.venv/
+static/gitea-*/
+static/out-*.json
+paper/main.pdf
+paper-th/
+__pycache__/
+.DS_Store

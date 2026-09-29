@@ -1,0 +1,1 @@
+{"files":[{"a":12,"d":6,"f":"services/convert/notification.go"},{"a":57,"d":0,"f":"services/convert/notification_test.go"}],"msg":"Fix bug on notification read (#36339)\n\nWhen a user has been revoked permission to access a repository, the\nrelated notification could still be visited. But the repository's\ninformation should not be leaked any more."}

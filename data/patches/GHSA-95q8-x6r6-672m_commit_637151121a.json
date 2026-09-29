@@ -1,0 +1,1 @@
+{"files":[{"a":0,"d":4,"f":"crates/api/api/src/federation/read_community.rs"},{"a":8,"d":4,"f":"crates/api/api/src/federation/read_multi_community.rs"}],"msg":"Check multi-community read for private instance. (#6471)\n\n* Check multi-community read for private instance.\n\n* Adding import\n\n* Removing duped NoIdGiven error."}

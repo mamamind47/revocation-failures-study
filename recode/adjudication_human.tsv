@@ -1,0 +1,16 @@
+item	ghsa	decision	change	reason
+R009	GHSA-6r7x-4q7g-h83j	human	carrier DATA->UNCLEAR; fresh Y->DEPENDS	Text gives no mechanism; the LLM coders inferred one (violates "do not guess beyond text")
+R011	GHSA-2xf7-hmf6-p64j	human	fresh Y->N	A deactivated user cannot log in afresh; exploitation needs a pre-existing session
+R016	GHSA-j8xr-c56q-m8jj	human	kind PERMISSION->MEMBERSHIP	Patch #36340 adds cleanup on collaboration removal
+R022	GHSA-rgv6-xp99-6mgj	human	relevant Y->N	Describes a missing revocation trigger (theft detection), not a withdrawal that failed
+R048	GHSA-wfhv-mj62-f5xh	human	carrier CACHE->UNCLEAR	"a few seconds" only; no mechanism stated
+R076	GHSA-p225-pc2x-4jpm	human	carrier CHECK->UNCLEAR; fresh Y->DEPENDS	No mechanism stated
+R028	GHSA-f7gq-h8jv-h3cq	final	none	SESSION vs TOKEN ambiguous; text says server-stored sessions
+R029	GHSA-pq65-77rc-7r8c	final	none	Rule R2: the composite role was created by the subject before revocation
+R032	GHSA-c6w6-57jj-62vh	final	none (borderline)	"loses access to a project": kind ambiguous
+R049	GHSA-wmm3-h9qj-p5v6	final	none	Signed cookie-session holds all state: self-contained -> TOKEN
+R051	GHSA-275c-xpvc-jgfw	final	none (borderline)	OpenClaw coded as non-webapp throughout; consistency
+R068	GHSA-vx2m-jpxr-xv7w	final	none	R2: context hint obtained before revocation
+R070	GHSA-4m82-p8cx-f94j	final	none (borderline)	Database server, not a web app
+R074	GHSA-2w46-vq8h-98vh	final	none (borderline)	Email change as withdrawal of the old inbox's authority; 2 of 3 coders Y
+R090	GHSA-66m4-5jjr-2rg5	final	none; codebook fixed	Codebook listed webhooks under both ASYNC and R2; keep ASYNC, remove webhook from R2 examples
