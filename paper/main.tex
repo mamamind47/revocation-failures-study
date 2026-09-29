@@ -139,7 +139,7 @@ which is shaped by that pipeline.
 
 \paragraph{Sessions and logout}
 Insufficient session expiration (CWE-613) and the failure to invalidate sessions or tokens at logout are
-well known. OWASP ASVS contains requirements for them~\cite{owaspasvs}. Lamisa et al.\ audited the top one
+well known. OWASP ASVS requires that logout invalidates the session token (V3.3.1) and that users can terminate other sessions after a password change (V3.3.3)~\cite{owaspasvs}. Lamisa et al.\ audited the top one
 million sites and found that 85\% of sites using JWTs fail to invalidate tokens upon logout and 51\% do not
 terminate prior sessions after a password reset~\cite{loginplus}. We report this class for
 completeness but do not claim it as new. Our contribution lies in the other revocation kinds and in the
@@ -148,7 +148,7 @@ carriers that are not sessions.
 \paragraph{Revocation and consistency}
 Global authorisation systems treat revocation as a consistency problem~\cite{pang2019zanzibar}. Recent work
 studies revocation for long-running AI agents~\cite{zhu2026agentrevocation} and finds that agent-memory
-systems do not enforce revocation labels~\cite{shen2026agentmemory}. We study the same phenomenon in
+systems do not enforce revocation labels~\cite{shen2026agentmemory}. Choi et al.\ ask what authorisation state an agent monitor must keep so that later revocations are decided correctly~\cite{choi2026residualauth}. We study the same phenomenon in
 conventional web software, where derived state is spread across ordinary tables and code paths.
 
 \paragraph{Authorisation bugs and incomplete fixes}
@@ -156,7 +156,7 @@ Kaur builds an empirical taxonomy of broken object-level authorisation from bug-
 Studies of incomplete security fixes examine multiple patches per CVE~\cite{zhang2026multipatch} and
 incomplete fixes in the Linux kernel~\cite{liu2025kernelincomplete}. Our RQ4 gives a
 revocation-specific account of why fixes remain incomplete.
-\todo{Monitor for the ``incomplete-patch measurement study'' credited in GHSA-qf2f and cite it if published.}
+One Gitea advisory in our dataset credits ``an incomplete-patch measurement study'' (GHSA-qf2f-qh6p-7v89). As of 29 September 2026 we found no publication from it, and our study differs in scope: it covers revocation across 125 projects rather than incomplete patches in general.
 
 %======================================================================
 \section{Method}
@@ -689,6 +689,17 @@ The dataset, codebook (v1.2), adjudication logs, recall-audit samples, human re-
 static probe are available at \url{https://github.com/mamamind47/revocation-failures-study}. Code is released under the MIT
 licence and data under CC-BY 4.0. Advisory excerpts come from the GitHub Advisory Database (CC-BY 4.0), snapshot commit
 \texttt{66975d7}. Untriaged probe output is withheld.
+
+\section*{CRediT authorship contribution statement}
+\textbf{Badeesorn Sittikong:} Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation,
+Data curation, Writing -- original draft, Writing -- review \& editing, Visualization.
+
+\section*{Declaration of competing interest}
+The author declares that they have no known competing financial interests or personal relationships that could have
+appeared to influence the work reported in this paper.
+
+\section*{Funding}
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
 
 \section*{Declaration of generative AI use}
 During this work the author used Claude (Anthropic) and Codex CLI (OpenAI) as two independent coders of

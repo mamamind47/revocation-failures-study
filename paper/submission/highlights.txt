@@ -1,0 +1,5 @@
+229 access-revocation failures from 125 open-source projects, coded and audited
+77% of web-app revocation failures need state created before the revocation
+Clean-state tests miss most failures; caches carry only 8 of 187 web-app cases
+Fixes miss a revocation trigger, a credential type, an entry path or a field
+A source-only probe comparing cleanup across revocation paths finds a known leak
