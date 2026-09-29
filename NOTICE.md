@@ -6,4 +6,4 @@ Database (https://github.com/github/advisory-database), snapshot commit
 Attribution: GitHub, Inc. and the advisory contributors. The excerpts are unchanged apart from truncation.
 
 Labels, codebook, scripts, analyses and the static probe are the author's work.
-TODO(Han): choose a license for these (e.g. CC-BY 4.0 for data and MIT for code) before publishing.
+Code (scripts/, static/revcov.py) is MIT-licensed (see LICENSE). Labels, codebook and analyses are CC-BY 4.0.
